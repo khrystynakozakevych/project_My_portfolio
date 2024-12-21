@@ -1,0 +1,43 @@
+.content {
+  position: relative;
+  max-height: 960px;
+  overflow: hidden;
+}
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+  transform: translateY(-300px);
+}
+
+.marquee__inner {
+  display: flex;
+  transform: rotate(16deg);
+  margin-top: 25px;
+}
+
+.marquee__line {
+  flex-shrink: 0;
+  margin-right: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  animation-name: marqueeLine;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.cover-img {
+}
+
+@keyframes marqueeLine {
+  from {
+    transform: translateX(-20%);
+  }
+
+  to {
+    transform: translateX(-180%);
+  }
+}
