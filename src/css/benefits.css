@@ -91,14 +91,13 @@ color: rgba(250, 250, 250, 0.6);
   @media only screen and (min-width: 1280px) {
     .container-benefits {
         display: flex;
-        gap: 412px;
     }
-    .benefits-header {
-        display: flex;
-        min-width: 284px;
-        height: 24px;
+    .desk {
+        margin-left: auto;
+        width: 680px;
+        
     }
     .benefits-frame-content {
         width: 284px;
     }
-  }
+}
