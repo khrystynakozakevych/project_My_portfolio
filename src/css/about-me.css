@@ -50,6 +50,16 @@
   border-radius: 24px;
 }
 
+.accordion-block button {
+  display: block;
+}
+
+.ac-header svg {
+  display: block;
+  stroke: #242527;
+  fill: none;
+}
+
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
   .text-block {
