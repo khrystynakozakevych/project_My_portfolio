@@ -14,6 +14,11 @@
 
 /* Styles for Mobile devices */
 
+#abt-me-section {
+  margin-bottom: 164px;
+  background-color: #1c1d20;
+}
+
 .text-block p {
   font-size: 24px;
   font-weight: 500;
@@ -41,6 +46,7 @@
   flex-wrap: wrap;
   gap: 16px;
   justify-content: space-between;
+  padding-bottom: 32px;
 }
 
 .text-block {
@@ -50,14 +56,75 @@
   border-radius: 24px;
 }
 
-.accordion-block button {
+/* Accordion styles */
+.accordion-block .ac-trigger svg {
   display: block;
+  stroke: #fafafa;
+  fill: none;
 }
 
-.ac-header svg {
+.accordion-block:not(.no-animation) svg {
+  transition: rotate ease 600ms;
+}
+
+.accordion-block .ac-trigger[aria-expanded='true'] svg {
+  rotate: -180deg;
+}
+
+.accordion-block .ac-trigger::after {
+  display: none;
+}
+
+.accordion-block .ac .ac-trigger {
   display: block;
-  stroke: #242527;
-  fill: none;
+  display: inline-block;
+  width: auto;
+  padding: 10px;
+  border: 1px solid #fafafa33;
+  background-color: #1c1d20;
+  border-radius: 50%;
+}
+
+.accordion-block .ac-header {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #fafafa66;
+}
+
+.accordion-block .ac {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fafafa33;
+  margin: 0;
+  padding-bottom: 32px;
+}
+
+.accordion-block .ac:not(:first-child) {
+  padding-top: 20px;
+}
+
+.accordion-block .ac-text li:not(:last-child) {
+  margin-bottom: 32px;
+}
+.accordion-block .ac .ac-panel .ac-text {
+  padding: 0;
+  color: #fafafa;
+  font-family: 'Inter Tight', serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: -0.02em;
+}
+
+.accordion-block .ac .ac-panel {
+  padding-top: 12px;
 }
 
 /* Styles for Tablet devices */
@@ -69,17 +136,38 @@
     font-size: 38px;
     line-height: 1.05em;
   }
+  .banner {
+    padding-bottom: 64px;
+  }
+
+  .accordion-block .ac:not(:first-child) {
+    padding-top: 32px;
+  }
+
+  .accordion-block .ac .ac-panel {
+    padding-top: 8px;
+  }
+
+  .accordion-block .ac-text li:not(:last-child) {
+    margin-bottom: 32px;
+  }
 }
 
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
   .banner {
     gap: 0;
+    padding-bottom: 64px;
   }
   .text-block {
     width: 680px;
   }
   .image-block img {
     max-width: 680px;
+  }
+
+  .accordion-block .ac .ac-panel .ac-text {
+    margin-left: 696px;
+    width: 612px;
   }
 }
