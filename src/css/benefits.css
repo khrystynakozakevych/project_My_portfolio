@@ -36,7 +36,8 @@
     gap: 64px;
     border-radius: 20px;
     padding: 24px;
-    width: 296px;
+    width: auto;
+    max-width: 296px;
     height: 222px;
     background: #242527;
 
