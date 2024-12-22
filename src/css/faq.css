@@ -1,33 +1,58 @@
 #faq {
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .container-faq {
   display: grid;
   grid-template-columns: 1fr; /* Спочатку один стовпчик */
-  grid-gap: 0px;
+  grid-gap: 20px;
+}
+
+.container-faq ul {
+  display: contents; /* Убираем стандартное поведение ul */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .faq-item {
   background-color: #1c1d20;
   padding: 20px;
   border: 1px solid #ccc;
+  position: relative;
+}
+
+.faq-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 .faq-item h3 {
   color: #fff;
   margin-bottom: 16px; /* По умолчанию для мобильных устройств */
+  cursor: pointer; /* Добавляем курсор для указания на кликабельность */
 }
 
 .faq-item p {
   color: #888;
+  display: none; /* Скрываем параграфы по умолчанию */
 }
 
 .main-section-faq-title {
   font: 600 16px / 1.5 'Inter Tight', sans-serif;
   letter-spacing: -0.02em;
   color: #7c7b7b;
+  margin-bottom: 32px;
 }
 
 /* Для екранів шириною від 768px */
