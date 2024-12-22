@@ -12,8 +12,12 @@
 
 .marquee__inner {
   display: flex;
-  transform: rotate(16deg);
+  /* transform: rotate(16deg); */
   margin-top: 25px;
+}
+
+.marquee__line a {
+  display: flex;
 }
 
 .marquee__line {
