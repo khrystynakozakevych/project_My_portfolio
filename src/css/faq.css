@@ -1,12 +1,12 @@
-.faq {
+#faq {
   width: 80%;
   margin: 0 auto;
 }
 
-.faq-container {
+.container-faq {
   display: grid;
   grid-template-columns: 1fr; /* Спочатку один стовпчик */
-  grid-gap: 20px;
+  grid-gap: 0px;
 }
 
 .faq-item {
@@ -32,7 +32,7 @@
 
 /* Для екранів шириною від 768px */
 @media (min-width: 768px) {
-  .faq-container {
+  .container-faq {
     grid-template-columns: 1fr 1fr; /* Змінюємо на два стовпчики */
   }
 
