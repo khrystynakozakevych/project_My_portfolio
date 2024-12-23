@@ -535,9 +535,3 @@ font-family: "Inter Tight", sans-serif;
     cursor: pointer;
 }
 
-/* Приховуємо іконку на великих екранах */
-@media (min-width: 768px) {
-    .menu-icon {
-        display: none;
-    }
-}
