@@ -61,7 +61,7 @@ border-radius: 18px;
     border-radius: 50px;
     
     cursor: pointer;
-  
+    text-decoration: underline;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease;
     /* Анімація змін */
@@ -81,14 +81,21 @@ border-radius: 18px;
 
 .header .menu-text {
     display: none;
+    /* Спочатку приховуємо кнопку */
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
     color: white;
     cursor: pointer;
+    all: unset;
+    /* Скидаємо стилі кнопки */
+    font: inherit;
+    color: inherit;
     text-decoration: underline;
-    
-        
+}
+body .header .menu-text {
+    display: none;
+    /* Точно приховуємо кнопку */
 }
   .icon-burger {
     width: 24px;
@@ -122,8 +129,6 @@ border-radius: 18px;
 font-family: "Inter Tight", sans-serif;
     font-weight: 500;
     font-size: 50px;
-
-    
     line-height: 100%;
     letter-spacing: -0.03em;
     text-transform: uppercase;
@@ -273,6 +278,9 @@ font-weight: 500;
      color: white;
     cursor: pointer;
         }
+body .header .menu-text {
+display: inline-block;
+}
 .header .menu-text {
 display: flex;
 font-size: 16px;
@@ -467,7 +475,7 @@ font-family: "Inter Tight", sans-serif;
     
 }
 
-.mobile-menu .close-menu {
+.mobile-menu .close-menu  {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -476,6 +484,12 @@ font-family: "Inter Tight", sans-serif;
     font-size: 24px;
     color: white;
     cursor: pointer;
+}
+.mobile-menu .close-menu .close-icon {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+    display: block;
 }
 
 .mobile-menu nav ul {
