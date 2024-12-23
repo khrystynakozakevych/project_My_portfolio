@@ -1,29 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const menuButton = document.querySelector('.menu-button'); // Кнопка-гамбургер
-    const menuTextButton = document.querySelector('.menu-text'); // Кнопка "Menu"
-    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuButton = document.querySelector('.menu-button');
+    const menuText = document.querySelector('.menu-text');
     const closeMenuButton = document.querySelector('.close-menu');
+    const mobileMenu = document.querySelector('.mobile-menu');
 
-    // Відкрити мобільне меню з кнопки-гамбургера
-    menuButton.addEventListener('click', () => {
+    // Відкриття меню через кнопку або текст "Menu"
+    const openMenu = () => {
         mobileMenu.classList.add('active');
-    });
+    };
 
-    // Відкрити мобільне меню з кнопки "Menu"
-    menuTextButton.addEventListener('click', (event) => {
-        event.preventDefault(); // Щоб уникнути переходу за посиланням
-        mobileMenu.classList.add('active');
-    });
+    menuButton.addEventListener('click', openMenu);
+    menuText.addEventListener('click', openMenu);
 
-    // Закрити мобільне меню з кнопки ✕
+    // Закриття меню
     closeMenuButton.addEventListener('click', () => {
         mobileMenu.classList.remove('active');
     });
 
-    // Закривати меню після кліку на посилання в мобільному меню
+    // Закриття меню після кліку на посилання
     document.querySelectorAll('.mobile-menu nav ul li a').forEach(link => {
         link.addEventListener('click', () => {
             mobileMenu.classList.remove('active');
+        });
+    });
+
+    // Плавний скрол до секцій
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                });
+            }
         });
     });
 });

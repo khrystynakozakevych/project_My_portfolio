@@ -1,5 +1,5 @@
 
-body {
+.body {
     background-image: url(../img/header/hero-bg-mob.jpg);
         min-width: 320px;
         background-repeat: no-repeat;
@@ -35,7 +35,7 @@ body {
     padding-left: 0px;
     padding-top: 32px;
 }
-.logo .icon {
+ .header-icon {
     fill: white;
     margin: 0;
     
@@ -47,6 +47,24 @@ border-radius: 18px;
     border: 2px solid white;
 
   
+}
+.menu-text {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    background-color: transparent;
+    
+    padding: 10px 20px;
+    
+    border-radius: 50px;
+    
+    cursor: pointer;
+  
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Анімація змін */
 }
 .header .menu-button {
     font-size: 24px;
@@ -71,10 +89,10 @@ border-radius: 18px;
     text-decoration: underline;
         
 }
-.icon-burger {
+  .icon-burger {
     width: 24px;
     height: 24px;
-    fill: white;
+    stroke: white;
     transition: transform 0.3s ease, fill 0.3s ease;
     cursor: pointer;
 }
@@ -154,9 +172,9 @@ font-family: "Inter Tight", sans-serif;
     backdrop-filter: blur(100px);
 }
 
-.icon {
+.header-icon {
 
-   fill: #fafafa;
+   stroke: #fafafa;
 }
 
 
@@ -233,8 +251,8 @@ font-weight: 500;
 
 }
 
-.close-menu .icon {
-    fill: white;
+.close-menu .close-icon {
+   stroke: white;
     width: 13px;
     height: 13px;
     transition: fill 0.3s ease;
