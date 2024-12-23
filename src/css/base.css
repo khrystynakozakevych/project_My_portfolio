@@ -19,7 +19,6 @@ body {
   color: #fafafa;
   display: flex;
   flex-direction: column;
-  min-width: 100vw;
   min-height: 100vh;
 
   font-family: 'Inter Tight', serif;
