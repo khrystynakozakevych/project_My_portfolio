@@ -17,12 +17,12 @@
 }
 
 body {
-  min-width: 100vw;
-  min-height: 100vh;
   margin: 0;
   background-color: #1c1d20;
   color: #fafafa;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 
   font-family: 'Inter Tight', serif;
 }
