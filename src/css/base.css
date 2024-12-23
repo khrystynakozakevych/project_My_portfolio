@@ -6,9 +6,6 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -22,6 +19,7 @@ body {
   color: #fafafa;
   display: flex;
   flex-direction: column;
+  min-width: 100vw;
   min-height: 100vh;
 
   font-family: 'Inter Tight', serif;
