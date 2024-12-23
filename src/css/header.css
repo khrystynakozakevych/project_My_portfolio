@@ -1,0 +1,525 @@
+
+body {
+    background-image: url(../img/header/hero-bg-mob.jpg);
+        min-width: 320px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header */
+.header { 
+    background-image:  url(./images/Dark-bg-phone.jpg);
+        min-width: 320px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    background: transparent;
+    position: relative;
+    z-index: 10;
+    padding: 0;
+   
+}
+
+.header .logo {
+    display: flex;
+    align-items: top;
+    gap: 1px;
+    margin-left: 0px ;  
+    padding-left: 0px;
+    padding-top: 32px;
+}
+.logo .icon {
+    fill: white;
+    margin: 0;
+    
+}
+.header .logo img {
+border-radius: 18px;
+    width: 80px;
+    height: 80px;
+    border: 2px solid white;
+
+  
+}
+.header .menu-button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+   display: flex;   
+    position: absolute;
+    top: 42px;
+    right: 20px;
+}
+
+
+.header .menu-text {
+    display: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+        
+}
+.icon-burger {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    transition: transform 0.3s ease, fill 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-button:hover .icon-burger {
+    fill: #ff6b6b;
+    transform: scale(1.1);
+}
+
+.menu-button:active .icon-burger {
+    transform: scale(0.9);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+   
+}
+
+.hero h1 {
+font-family: "Inter Tight", sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+
+    
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #fafafa;
+    text-align: left;
+}
+
+
+/* social-menu */
+.social-menu {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    gap: 4px;
+
+}
+
+.nav-icon {
+    width: 37px;
+    height: 37px;
+   
+}
+
+.link-icon {
+    width: 100%;
+    height: 100%;
+    border: 2px solid white ;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(100px);
+}
+
+.icon {
+
+   fill: #fafafa;
+}
+
+
+
+.email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 12px;
+    border: 2px solid white;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+    backdrop-filter: blur(100px);
+    height: 37px;
+    box-sizing: border-box;
+
+}
+
+.email:hover {
+    border-color: #ff6b6b; 
+    color: #ff6b6b; 
+    background-color: rgba(255, 107, 107, 0.1); 
+}
+
+/* Кнопка "Order the Project" */
+.order-button {
+    display: none;
+    background: #ff3b3b;
+    color: white;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-family: "Inter Tight", sans-serif;
+font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+}
+
+.order-button:hover {
+    background: #d12c2c;
+}
+.close-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #fafafa;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+.close-menu:hover {
+    background-color: #d12c2c;
+    transform: scale(1.1);
+}
+
+.close-menu:active {
+    transform: scale(0.9);
+
+}
+
+.close-menu .icon {
+    fill: white;
+    width: 13px;
+    height: 13px;
+    transition: fill 0.3s ease;
+
+}
+
+.close-menu:hover .icon {
+    fill: #ff6b6b;
+}
+/* Планшетна версія (768px і більше) */
+@media (min-width: 768px) {
+    .header .menu-button {
+    display: none;
+     font-size: 24px;
+     background: none;
+     border: none;
+     color: white;
+    cursor: pointer;
+        }
+.header .menu-text {
+display: flex;
+font-size: 16px;
+font-weight: bold;
+text-transform: uppercase;
+color: white;
+cursor: pointer;
+position: absolute;
+top: 32px;
+left: 50%;
+transform: translateX();
+        }
+ /* Кнопка "Order the Project" */
+ .order-button {
+  display: inline-block;
+ font-size: 18px;
+padding: 12px 24px;
+ position: absolute;
+right: 32px;
+   top: 32px;
+background: #ed3b44;
+font-family: "Inter Tight", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+ }
+.order-button:hover {
+  background: #b21d1d;
+ }
+
+      
+        .hero h1 {
+        font-family: "Inter Tight", sans-serif;
+            font-weight: 500;
+            font-size: 90px;
+            line-height: 100%;
+            letter-spacing: -0.03em;
+            text-transform: uppercase;
+            color: #fafafa;
+        }
+       
+
+  .social-menu {
+        bottom: 32px; 
+        right: 32px;
+        left: auto; 
+        transform: none; 
+        flex-direction: row; 
+        align-items: center; 
+        gap: 8px;
+    }
+
+    .social-links {
+        gap: 8px; 
+    }
+
+    .email {
+        margin-left: 8px;
+    }
+}
+
+.social-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.social-links li a:hover {
+    color: #ff6b6b;
+}
+
+.email {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.email:hover {
+    color: #ff6b6b;
+}
+
+/* Десктопна версія (1440px і більше) */
+@media (min-width: 1440px) {
+
+    .header .menu-text {
+        font-size: 18px;
+    }
+
+    /* Hero Section */
+    .hero {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 px;
+    }
+
+    .hero h1 {
+    font-family: "Inter Tight", sans-serif;
+        font-weight: 500;
+        font-size: 90px;
+        line-height: 100%;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        color: #fafafa;
+    }
+
+   
+    /*social-menu */
+        .social-menu {
+            position: absolute;
+            bottom: 32px;
+            right: 32px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+        }
+    
+        .social-links {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            gap: 8px;
+            right: 32px;
+            
+        }
+    
+        .social-links li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+    
+        .social-links li a:hover {
+            color: #ff6b6b;
+        }
+    
+        .email {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+    
+        .email:hover {
+            color: #ff6b6b;
+        }
+
+    /* Кнопка "Order the Project" */
+    .order-button {
+        display: inline-block;
+        font-size: 18px;
+        padding: 12px 24px;
+        position: absolute;
+        right: 60px;
+        top: 30px;
+        font-family: "Inter Tight", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: -0.02em;
+            color: #fafafa;
+    }
+
+    .order-button:hover {
+        background: #b21d1d;
+    }
+}
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, #d12c2c, #2d2d2d);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.mobile-menu.active {
+    display: flex;
+    
+}
+
+.mobile-menu .close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.mobile-menu nav ul {
+    list-style: none;
+    text-align: center;
+    
+}
+
+.mobile-menu nav ul li {
+    margin: 10px 0;
+}
+
+.mobile-menu nav ul li a {
+font-family: "Inter Tight", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fafafa;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu nav ul li a:hover {
+    color: #ff6b6b;
+}
+
+.mobile-menu .order-project {
+   margin-bottom: 64px;
+   margin-top: 289px;
+    padding: 14px 32px;
+    font-size: 16px;
+    color: white;
+    background: #ED3B44;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+    
+}
+
+.mobile-menu .order-project:hover {
+    background: #d12c2c;
+}
+
+/* Іконка меню */
+.menu-icon {
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Приховуємо іконку на великих екранах */
+@media (min-width: 768px) {
+    .menu-icon {
+        display: none;
+    }
+}

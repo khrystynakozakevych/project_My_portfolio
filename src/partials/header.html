@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+     
+    <header class="header">
+        
+        <a href="#menu" class="menu-text">Menu</a>
+        <button class="order-button">Order the project</button>
+        <div class="container">
+            <div class="logo">
+                <img src="../img/header/logo-img.png" alt="Profile Picture">
+                <picture>
+                    <source srcset="
+                          ../src/img/header/logo-img-2x.webp  1x,
+                        ../src/img/header/logo-img-2x.png  2x
+                        " media="(min-width: 1440px)" />
+                    <source srcset="
+                        ../src/img/header/logo-img.webp 1x,
+                        " media="(min-width: 768px)" />
+                    
+                
+                </picture>
+                <svg class="icon" width="7" height="7">
+                    <use href="..//img/icons.svg#icon-user"></use>
+                </svg>
+                <svg class="icon" width="7" height="7">
+                    <use href="..//img/icons.svg#icon-user"></use>
+                </svg>
+            </div>
+       
+            <button class="menu-button" aria-label="Open Menu"><svg class="icon-burger" width="24" height="24">
+                <use href="..//img/icons.svg#icon-user"></use>
+            </svg></button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1>
+                HELLO.
+                I’M FULLSTACK 
+                DEVELOPER 
+                LLOYD JEFFERSON.
+            </h1>
+        </div>
+
+        <!-- Social Section (Social Links and Email) -->
+        <div class="social-menu">
+            <ul class="social-links">
+                <li class="nav-icon">
+                    <a href="https://www.instagram.com/" target="_blank" class="link-icon">
+                        <svg class="icon" width="13" height="13">
+                            <use href="..//img/icons.svg#icon-hourglass"></use>
+                        </svg>
+                    </a>
+                </li>
+                
+                <li class="nav-icon"><a href="https://www.facebook.com/" target="_blank" class="link-icon">
+                        <svg class="icon" width="13" height="13">
+                            <use href="./images/icons.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="nav-icon"><a href="https://www.youtube.com/" target="_blank" class="link-icon">
+                        <svg class="icon" width="13" height="13">
+                            <use href="./images/icons.svg#icon-youtube"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="nav-icon"><a href="https://github.com/" target="_blank" class="link-icon">
+                        <svg class="icon" width="13" height="13">
+                            <use href="./images/icons.svg#icon-github"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <a href="mailto:jefferson@gmail.com" class="email">jefferson@gmail.com</a>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="container">
+        <div class="mobile-menu">
+            <button class="close-menu">
+                <svg class="icon" width="13" height="13">
+                    <use href="..//img/icons.svg#icon-user"></use>
+                </svg>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+            <button class="order-project">Order the project</button>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="js/header.js"></script>
+    </div>
+</body>
+<!--     <picture>
+                <source srcset="
+          ../src/img/header/hero-bg-desk.jpg  1x,
+        ../src/img/header/hero-bg-desk-2x.jpg  2x
+        " media="(min-width: 1440px)" />
+                <source srcset="
+        ../src/img/header/hero-bg-tab.jpg1x,
+        ../src/img/header/hero-bg-tab-2x.jpg 2x
+        " media="(min-width: 768px)" />
+                <source srcset="
+        ../ src/img/header/hero-bg-mob.jpg  1x,
+        ../ src/img/header/hero-bg-tab-2x.jpg 2x
+        " media="(max-width: 767px)" />
+                
+            </picture>-->
+</html>
