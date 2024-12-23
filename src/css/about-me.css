@@ -15,7 +15,7 @@
 /* Styles for Mobile devices */
 
 #abt-me-section {
-  margin-bottom: 164px;
+  margin-bottom: 64px;
   background-color: #1c1d20;
 }
 
@@ -139,6 +139,11 @@
   border-radius: 50%;
 }
 
+.skills-swiper .swiper-slide-active {
+  background-color: #ed3b44;
+  border: none;
+}
+
 .skills-swiper .slide-text {
   font-family: Inter Tight;
   font-size: 16px;
@@ -179,6 +184,9 @@
 
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
+  #abt-me-section {
+    margin-bottom: 96px;
+  }
   .text-block {
     height: 700px;
   }
@@ -208,6 +216,12 @@
     width: 200px;
     height: 200px;
   }
+  .skills-swiper .slide-text {
+    font-size: 20px;
+    line-height: 1.2em;
+    letter-spacing: -0.02em;
+  }
+
   .skills-swiper {
     width: 600px;
   }
@@ -220,6 +234,9 @@
 
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
+  #abt-me-section {
+    margin-bottom: 164px;
+  }
   .banner {
     gap: 0;
     padding-bottom: 64px;

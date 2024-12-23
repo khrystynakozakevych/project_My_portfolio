@@ -22,12 +22,7 @@ function setupSwiper() {
       nextEl: '.swiper-next-skill',
     },
   });
-
-  let activeIndex = swiper.activeIndex;
-  swiper.on('activeIndexChange', s => {});
 }
-
-function handleSlideChange(e) {}
 
 setupAccordion();
 setupSwiper();
