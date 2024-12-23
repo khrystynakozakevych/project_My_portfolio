@@ -19,15 +19,38 @@ document.addEventListener('DOMContentLoaded', function () {
       const content = item.querySelector('p');
       const icon = item.querySelector('.faq-icon');
 
+      // Исправление начального состояния иконок
+      if (content.style.display === 'none' || content.style.display === '') {
+        icon.innerHTML =
+          '<use xlink:href="./img/icons.svg#icon-arrow-bot"></use>';
+      } else {
+        icon.innerHTML =
+          '<use xlink:href="./img/icons.svg#icon-arrow-top"></use>';
+      }
+
       toggleButton.addEventListener('click', function () {
         if (content.style.display === 'none' || content.style.display === '') {
           content.style.display = 'block';
           icon.innerHTML =
-            '<use xlink:href="./img/icons.svg#icon-arrow-bot"></use>';
+            '<use xlink:href="./img/icons.svg#icon-arrow-top"></use>';
         } else {
           content.style.display = 'none';
           icon.innerHTML =
+            '<use xlink:href="./img/icons.svg#icon-arrow-bot"></use>';
+        }
+      });
+
+      // Добавляем обработчик для заголовков
+      const header = item.querySelector('h3');
+      header.addEventListener('click', function () {
+        if (content.style.display === 'none' || content.style.display === '') {
+          content.style.display = 'block';
+          icon.innerHTML =
             '<use xlink:href="./img/icons.svg#icon-arrow-top"></use>';
+        } else {
+          content.style.display = 'none';
+          icon.innerHTML =
+            '<use xlink:href="./img/icons.svg#icon-arrow-bot"></use>';
         }
       });
     });
