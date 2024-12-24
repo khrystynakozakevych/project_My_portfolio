@@ -1,0 +1,60 @@
+<div class="container">
+  <footer class="footer">
+    <div class="logo">
+      <picture>
+        <source
+          media="(min-width: 376px)"
+          srcset="
+            ../img/footer/footer-logo-desk.webp    1x,
+            ../img/footer/footer-logo-desk-2x.webp 2x
+          "
+        />
+        <source
+          media="(max-width: 375px)"
+          width="44"
+          height="44"
+          srcset="
+            ../img/footer/footer-logo-mob.webp    1x,
+            ../img/footer/footer-logo-mob-2x.webp 2x
+          "
+        />
+        <img
+          src="../img/footer/footer-logo-desk.webp"
+          width="70"
+          height="70"
+          alt="footer-logo-desk"
+          loading="lazy"
+        />
+      </picture>
+      <h1 class="logo_description">Let’s <span>work</span> together</h1>
+    </div>
+    <form class="contact-form" id="contactForm">
+      <div class="form-mail-comment-wrap">
+        <input
+          class="form-email-and-tex"
+          type="email"
+          id="email"
+          placeholder="Your Email"
+          required
+        />
+      </div>
+      <div class="form-mail-comment-wrap">
+        <textarea
+          class="form-email-and-tex"
+          id="comments"
+          placeholder="Your Comments"
+          rows="1"
+          required
+        ></textarea>
+      </div>
+
+      <button class="form-btn" type="submit">Send</button>
+    </form>
+    <div class="call-mail-info">
+      <a class="mail-tel" href="mailto:lloydjefferson@gmail.com"
+        >lloydjefferson@gmail.com</a
+      >
+      <a class="mail-tel" href="tel:+380 11 1111 11 11">+380 11 1111 11 11</a>
+    </div>
+  </footer>
+</div>
