@@ -179,6 +179,7 @@
         display: flex;
         justify-content: space-between;
     }
+      
 
     .menu-button {
         display: none;
@@ -199,7 +200,7 @@
         border: none;
         text-align: center;
         transition: background-color 0.3s ease, color 0.3s ease;
-        /* Анімація змін */
+        margin-bottom: 0px;
     }
 
     /* Кнопка "Order the Project" */
@@ -318,22 +319,6 @@
     .email:hover {
         color: #ff6b6b;
     }
-
-    /* Кнопка "Order the Project" 
-    .order-button {
-        display: inline-block;
-        font-size: 18px;
-        padding: 12px 24px;
-        position: absolute;
-        right: 32px;
-        top: 32px;
-        font-family: 'Inter Tight', sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        letter-spacing: -0.02em;
-        color: #fafafa;
-    }*/
-
     .order-button:hover {
         background: #b21d1d;
     }
@@ -478,6 +463,7 @@
     visibility: visible;
     pointer-events: auto;
     
+    
 }
 
 @media only screen and (min-width: 768px) {
@@ -486,12 +472,14 @@
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
+        
     }
    .tablet-menu.active {
     display: block;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    padding-top: 0px;
    }
     .nav-tablet-list {
         display: flex;
@@ -505,6 +493,5 @@
         font-size: 16px;
         letter-spacing: -0.02em;
         text-decoration-skip-ink: none;
-        color: #fafafa;
-       
+        color: #fafafa;      
 }}
