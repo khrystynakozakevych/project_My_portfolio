@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer page-content">
   <div class="container wrapper">
     <div class="logo">
       <picture>
@@ -38,6 +38,7 @@
           type="email"
           id="email"
           placeholder="Your Email"
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
           required
         />
       </div>
@@ -59,6 +60,17 @@
         >lloydjefferson@gmail.com</a
       >
       <a class="mail-tel" href="tel:+380 11 1111 11 11">+380 11 1111 11 11</a>
+    </div>
+    <div class="modal hidden" id="modal">
+      <div class="modal-backdrop"></div>
+      <div class="modal-content">
+        <h2 class="modal-title">Thank you for your interest in cooperation!</h2>
+        <p class="modal-description">
+          The manager will contact you shortly to discuss further details
+          regarding your request. Please stay in touch.
+        </p>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
     </div>
   </div>
 </footer>
