@@ -1,3 +1,9 @@
+.covers-section {
+  background-image: url(../img/covers/covers-bcg.png);
+  width: 100%;
+  height: 508px;
+}
+
 .content {
   position: relative;
   max-height: 960px;
@@ -32,9 +38,6 @@
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-
-/* .cover-img {
-} */
 
 @keyframes marqueeLine {
   from {
