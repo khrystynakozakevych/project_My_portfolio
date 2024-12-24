@@ -1,40 +1,23 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const menuButton = document.querySelector('.menu-button');
-    const menuText = document.querySelector('.menu-text');
-    const closeMenuButton = document.querySelector('.close-menu');
-    const mobileMenu = document.querySelector('.mobile-menu');
+// Отримуємо елементи з DOM
+const menuButton = document.querySelector('.menu-button'); // Кнопка відкриття меню
+const closeMenuButton = document.querySelector('.close-menu'); // Кнопка закриття меню
+const mobileMenu = document.querySelector('.mobile-menu'); // Елемент мобільного меню
 
-    // Відкриття меню через кнопку або текст "Menu"
-    const openMenu = () => {
-        mobileMenu.classList.add('active');
-    };
+// Функція для відкриття мобільного меню
+menuButton.addEventListener('click', () => {
+    mobileMenu.classList.add('active'); // Додаємо клас, щоб зробити меню видимим
+});
 
-    menuButton.addEventListener('click', openMenu);
-    menuText.addEventListener('click', openMenu);
+// Функція для закриття мобільного меню
+closeMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.remove('active'); // Видаляємо клас, щоб приховати меню
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const menuButton = document.querySelector('.menu-text'); // Кнопка "Menu"
+    const tabletMenu = document.querySelector('.tablet-menu'); // Меню для планшета
 
-    // Закриття меню
-    closeMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-    });
-
-    // Закриття меню після кліку на посилання
-    document.querySelectorAll('.mobile-menu nav ul li a').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-        });
-    });
-
-    // Плавний скрол до секцій
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                });
-            }
-        });
+    // Додаємо обробник події на кнопку "Menu"
+    menuButton.addEventListener('click', function () {
+        tabletMenu.classList.toggle('active'); // Перемикаємо клас active для меню
     });
 });

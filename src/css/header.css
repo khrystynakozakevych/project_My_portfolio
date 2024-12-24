@@ -1,112 +1,55 @@
 
-.body {
-    background-image: url(../img/header/hero-bg-mob.jpg);
-        min-width: 320px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    font-family: 'Arial', sans-serif;
-    color: white;
-    
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
 /* Header */
-.header { 
-    background-image:  url(./images/Dark-bg-phone.jpg);
-        min-width: 320px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    background: transparent;
-    position: relative;
-    z-index: 10;
-    padding: 0;
-   
+.header {
+    background-color: transparent;
+    width: 100%;
+    margin-top: 32px;
+    position: absolute;
+    left: 0;
+    right: 0;
 }
 
-.header .logo {
-    display: flex;
-    align-items: top;
-    gap: 1px;
-    margin-left: 0px ;  
-    padding-left: 0px;
-    padding-top: 32px;
+.header-container {
+    position: relative;
 }
- .header-icon {
+
+.header-logo {
+    display: flex;
+    gap: 8px;
+    width: 172px;
+
+}
+
+.header-icon {
     fill: white;
     margin: 0;
-    
+    stroke: #fafafa;
 }
-.header .logo img {
-border-radius: 18px;
-    width: 80px;
-    height: 80px;
-    border: 2px solid white;
 
-  
-}
+
 .menu-text {
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-    background-color: transparent;
+    display: none;
     
-    padding: 10px 20px;
-    
-    border-radius: 50px;
-    
-    cursor: pointer;
-    text-decoration: underline;
-    text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    /* Анімація змін */
 }
-.header .menu-button {
-    font-size: 24px;
+
+.menu-button {
     background: none;
     border: none;
-    color: white;
-    cursor: pointer;
-   display: flex;   
     position: absolute;
-    top: 42px;
+    width: 28px;
+    height: 28px;
+    top: 0;
     right: 20px;
 }
 
-
-.header .menu-text {
-    display: none;
-    /* Спочатку приховуємо кнопку */
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-    cursor: pointer;
-    all: unset;
-    /* Скидаємо стилі кнопки */
-    font: inherit;
-    color: inherit;
-    text-decoration: underline;
-}
-body .header .menu-text {
-    display: none;
-    /* Точно приховуємо кнопку */
-}
-  .icon-burger {
-    width: 24px;
-    height: 24px;
+.icon-burger {
     stroke: white;
     transition: transform 0.3s ease, fill 0.3s ease;
-    cursor: pointer;
+   
 }
 
 .menu-button:hover .icon-burger {
-    fill: #ff6b6b;
+    stroke: #ff6b6b;
     transform: scale(1.1);
 }
 
@@ -116,20 +59,30 @@ body .header .menu-text {
 
 /* Hero Section */
 .hero {
+    text-align: center;
+    background-image: url(../img/header/hero-bg-desk.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    height: 100%;
-   
+    height: 100vh;
+    padding-top: 281px;
+    padding-bottom: 32px;
 }
 
 .hero h1 {
-font-family: "Inter Tight", sans-serif;
     font-weight: 500;
     font-size: 50px;
-    line-height: 100%;
+
+    line-height: 1;
     letter-spacing: -0.03em;
     text-transform: uppercase;
     color: #fafafa;
@@ -137,40 +90,28 @@ font-family: "Inter Tight", sans-serif;
 }
 
 
-/* social-menu */
-.social-menu {
-    position: absolute;
-    bottom: 32px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 4px;
-
-}
 
 .social-links {
     list-style: none;
     display: flex;
     flex-direction: row;
-    padding: 0;
-    margin: 0;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
     gap: 4px;
-
 }
 
 .nav-icon {
     width: 37px;
     height: 37px;
-   
 }
 
 .link-icon {
-    width: 100%;
-    height: 100%;
-    border: 2px solid white ;
-    border-radius: 50%;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    padding: 10px 8px;
+    width: 37px;
+    height: 37px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,176 +119,39 @@ font-family: "Inter Tight", sans-serif;
     backdrop-filter: blur(100px);
 }
 
-.header-icon {
-
-   stroke: #fafafa;
-}
-
-
-
 .email {
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    padding: 0 12px;
-    border: 2px solid white;
-    border-radius: 50px;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    background-color: transparent;
+    padding: 10px 12px;
+    width: 178px;
+    height: 37px;
     transition: all 0.3s ease;
-    font-family: "Inter Tight", sans-serif;
     font-weight: 500;
     font-size: 14px;
     letter-spacing: -0.02em;
     color: #fafafa;
-    backdrop-filter: blur(100px);
     height: 37px;
     box-sizing: border-box;
-
 }
 
 .email:hover {
-    border-color: #ff6b6b; 
-    color: #ff6b6b; 
-    background-color: rgba(255, 107, 107, 0.1); 
-}
-
-/* Кнопка "Order the Project" */
-.order-button {
-    display: none;
-    background: #ff3b3b;
-    color: white;
-    font-size: 16px;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 20px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    font-family: "Inter Tight", sans-serif;
-font-weight: 500;
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    color: #fafafa;
-}
-
-.order-button:hover {
-    background: #d12c2c;
-}
-.close-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: #fafafa;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-
-}
-
-.close-menu:hover {
-    background-color: #d12c2c;
-    transform: scale(1.1);
-}
-
-.close-menu:active {
-    transform: scale(0.9);
-
-}
-
-.close-menu .close-icon {
-   stroke: white;
-    width: 13px;
-    height: 13px;
-    transition: fill 0.3s ease;
-
-}
-
-.close-menu:hover .icon {
-    fill: #ff6b6b;
-}
-/* Планшетна версія (768px і більше) */
-@media (min-width: 768px) {
-    .header .menu-button {
-    display: none;
-     font-size: 24px;
-     background: none;
-     border: none;
-     color: white;
-    cursor: pointer;
-        }
-body .header .menu-text {
-display: inline-block;
-}
-.header .menu-text {
-display: flex;
-font-size: 16px;
-font-weight: bold;
-text-transform: uppercase;
-color: white;
-cursor: pointer;
-position: absolute;
-top: 32px;
-left: 50%;
-transform: translateX();
-        }
- /* Кнопка "Order the Project" */
- .order-button {
-  display: inline-block;
- font-size: 18px;
-padding: 12px 24px;
- position: absolute;
-right: 32px;
-   top: 32px;
-background: #ed3b44;
-font-family: "Inter Tight", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    color: #fafafa;
- }
-.order-button:hover {
-  background: #b21d1d;
- }
-
-      
-        .hero h1 {
-        font-family: "Inter Tight", sans-serif;
-            font-weight: 500;
-            font-size: 90px;
-            line-height: 100%;
-            letter-spacing: -0.03em;
-            text-transform: uppercase;
-            color: #fafafa;
-        }
-       
-
-  .social-menu {
-        bottom: 32px; 
-        right: 32px;
-        left: auto; 
-        transform: none; 
-        flex-direction: row; 
-        align-items: center; 
-        gap: 8px;
-    }
-
-    .social-links {
-        gap: 8px; 
-    }
-
-    .email {
-        margin-left: 8px;
-    }
+    border: 1px solid #fafafa;
+    border-radius: 60px;
+    width: 223px;
+    height: 55px;
 }
 
 .social-links li a {
     text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: #fafafa;
     transition: color 0.3s ease;
 }
 
@@ -355,21 +159,102 @@ font-family: "Inter Tight", sans-serif;
     color: #ff6b6b;
 }
 
-.email {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-}
-
 .email:hover {
     color: #ff6b6b;
 }
 
+/* Кнопка "Order the Project" */
+.order-button {
+    display: none;
+    
+}
+
+.order-button:hover {
+    background: #d12c2c;
+}
+
+/* Планшетна версія (768px і більше) */
+@media (min-width: 768px) {
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu-button {
+        display: none;
+    
+    }
+
+    .menu-text {
+        display: flex;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: capitalize;
+        color: white;
+        cursor: pointer;
+        text-decoration: underline;
+        background-color: transparent;
+        padding-bottom: 0;
+        top: 42px;
+        border: none;
+        text-align: center;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        /* Анімація змін */
+    }
+
+    /* Кнопка "Order the Project" */
+    .order-button {
+        display: inline-block;
+        font-size: 16px;
+        padding: 18px 24px;
+        background: #ed3b44;
+        border-radius: 60px;
+        width: 163px;
+        height: 55px;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: -0.02em;
+        color: #fafafa;
+        border: none;
+        transition: background 0.3s ease;
+    }
+
+    .order-button:hover {
+        background: #b21d1d;
+    }
+
+    .hero h1 {
+        font-family: 'Inter Tight', sans-serif;
+        font-weight: 500;
+        font-size: 90px;
+        line-height: 100%;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        color: #fafafa;
+    }
+
+    .social-menu {
+        bottom: 32px;
+        right: 32px;
+        left: auto;
+        transform: none;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .social-links {
+        gap: 8px;
+    }
+
+    .email {
+        margin-left: 8px;
+    }
+}
+
 /* Десктопна версія (1440px і більше) */
 @media (min-width: 1440px) {
-
-    .header .menu-text {
+    .menu-text {
         font-size: 18px;
     }
 
@@ -382,122 +267,151 @@ font-family: "Inter Tight", sans-serif;
     }
 
     .hero h1 {
-    font-family: "Inter Tight", sans-serif;
+        font-family: 'Inter Tight', sans-serif;
         font-weight: 500;
         font-size: 90px;
         line-height: 100%;
         letter-spacing: -0.03em;
         text-transform: uppercase;
         color: #fafafa;
-        padding-left: 178px;
-        
     }
 
-   
     /*social-menu */
-        .social-menu {
-            position: absolute;
-            bottom: 32px;
-            right: 32px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+    .social-menu {
+        position: absolute;
+        bottom: 32px;
+        right: 32px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
 
-        }
-    
-        .social-links {
-            list-style: none;
-            display: flex;
-            padding: 0;
-            margin: 0;
-            gap: 8px;
-            right: 32px;
-            
-        }
-    
-        .social-links li a {
-            text-decoration: none;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-    
-        .social-links li a:hover {
-            color: #ff6b6b;
-        }
-    
-        .email {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            margin-left: 8px;
-        }
-    
-        .email:hover {
-            color: #ff6b6b;
-        }
+    .social-links {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        gap: 8px;
+        right: 32px;
+    }
 
-    /* Кнопка "Order the Project" */
+    .social-links li a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    .social-links li a:hover {
+        color: #ff6b6b;
+    }
+
+    .email {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        margin-left: 8px;
+    }
+
+    .email:hover {
+        color: #ff6b6b;
+    }
+
+    /* Кнопка "Order the Project" 
     .order-button {
         display: inline-block;
         font-size: 18px;
         padding: 12px 24px;
         position: absolute;
-        right: 60px;
-        top: 30px;
-        font-family: "Inter Tight", sans-serif;
-            font-weight: 500;
-            font-size: 16px;
-            letter-spacing: -0.02em;
-            color: #fafafa;
-    }
+        right: 32px;
+        top: 32px;
+        font-family: 'Inter Tight', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: -0.02em;
+        color: #fafafa;
+    }*/
 
     .order-button:hover {
         background: #b21d1d;
     }
 }
+
+/* Mobile menu */
 .mobile-menu {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(90deg, #d12c2c, #2d2d2d);
-    display: none;
+    padding-top: 302px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background-image: url(../img/header/hero-bg-mob.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 999;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    z-index: 999;
 }
 
 .mobile-menu.active {
-    display: flex;
-    
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
-.mobile-menu .close-menu  {
+.mobile-menu-container {
+    height: 446px;
+}
+
+.nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.close-menu {
     position: absolute;
     top: 20px;
     right: 20px;
     background: none;
     border: none;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-}
-.mobile-menu .close-menu .close-icon {
     width: 28px;
     height: 28px;
-    fill: currentColor;
-    display: block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+.close-menu:hover {
+    background-color: #d12c2c;
+    transform: scale(1.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-menu:active {
+    transform: scale(0.9);
+}
+
+.close-menu .close-icon {
+    stroke: white;
+    transition: fill 0.3s ease;
+}
+
+
 
 .mobile-menu nav ul {
     list-style: none;
     text-align: center;
-    
 }
 
 .mobile-menu nav ul li {
@@ -505,7 +419,6 @@ font-family: "Inter Tight", sans-serif;
 }
 
 .mobile-menu nav ul li a {
-font-family: "Inter Tight", sans-serif;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: -0.02em;
@@ -519,26 +432,23 @@ font-family: "Inter Tight", sans-serif;
     color: #ff6b6b;
 }
 
-.mobile-menu .order-project {
-   margin-bottom: 64px;
-   margin-top: 289px;
+.order-project-btn {
+
     padding: 14px 32px;
     font-size: 16px;
     color: white;
-    background: #ED3B44;
+    background: #ed3b44;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     transition: background 0.3s ease;
-    font-family: "Inter Tight", sans-serif;
     font-weight: 500;
     font-size: 14px;
     letter-spacing: -0.02em;
     color: #fafafa;
-    
 }
 
-.mobile-menu .order-project:hover {
+.mobile-menu .order-project-btn:hover {
     background: #d12c2c;
 }
 
@@ -552,3 +462,49 @@ font-family: "Inter Tight", sans-serif;
     cursor: pointer;
 }
 
+
+/* Tablet menu */
+.tablet-menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    
+}
+
+.tablet-menu.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    
+}
+
+@media only screen and (min-width: 768px) {
+    .tablet-menu {
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+   .tablet-menu.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+   }
+    .nav-tablet-list {
+        display: flex;
+        flex-direction: column;
+        /* Вертикальне розташування */
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        /* Відступ між елементами */
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: -0.02em;
+        text-decoration-skip-ink: none;
+        color: #fafafa;
+       
+}}
