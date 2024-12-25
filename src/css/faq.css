@@ -15,7 +15,7 @@
   grid-template-columns: 1fr; /* Один стовпчик за замовчуванням */
   gap: 0; /* Прибираємо проміжки між елементами */
   margin-bottom: 64px;
-  /* border: 1px solid rgba(250, 250, 250, 0.2);  */
+  /* border: 1px solid rgba(250, 250, 250, 0.2); */
   /* Загальна рамка контейнера */
 }
 
@@ -32,7 +32,7 @@
   border: none; /* Прибираємо межі за замовчуванням */
   border-bottom: 1px solid rgba(250, 250, 250, 0.2); /* Загальна нижня межа */
   position: relative;
-  padding-right: 60px;
+  /* padding-right: 60px; */
 }
 
 /*  верхня межа для першого елемента */
@@ -63,13 +63,13 @@
 }
 
 .faq-item h3 {
-  color: #fff;
+  color: #fafafa;
   margin-bottom: 16px;
   cursor: pointer;
 }
 
 .faq-item p {
-  color: #888;
+  color: rgba(250, 250, 250, 0.6);
   display: none; /* Приховуємо параграфи за замовчуванням */
 }
 
