@@ -6,7 +6,7 @@
   gap: 32px;
 }
 
-.content {
+.swiper-slide-main-content {
   background-color: #fafafa;
   padding: 32px;
   display: flex;
@@ -15,13 +15,13 @@
   align-items: flex-start;
 }
 
-.projects-title {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 117%;
-  letter-spacing: -0.03em;
-  color: #1c1d20;
-  margin-bottom: 32px;
+.projects-header {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #fafafa;
 }
 
 .swiper {
@@ -35,7 +35,7 @@
 }
 
 .swiper-slide {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   background-color: #242527;
@@ -46,8 +46,6 @@
   justify-content: center;
   align-items: center;
   padding: 100px 16px;
-  margin: auto;
-
   background-position: center;
 }
 
@@ -69,8 +67,10 @@
 }
 
 .project-title {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 117%;
+  letter-spacing: -0.03em;
   color: #1c1d20;
   margin-bottom: 32px;
 }
@@ -93,6 +93,7 @@
   justify-content: center;
   gap: 12px;
 }
+
 .arrow-next,
 .arrow-prev {
   display: flex;
@@ -111,19 +112,58 @@
 }
 
 @media (max-width: 768px) {
-  .swiper-slide picture img {
+  .project-image {
     height: auto;
   }
 }
 
-@media (min-width: 769px) {
-  .swiper-slide {
-    flex-direction: row;
-    align-items: center;
+@media (min-width: 768px) {
+  .project-title {
+    font-size: 44px;
+    line-height: 100%;
   }
+  .project-link {
+    padding: 18px 50px;
+    margin-bottom: 64px;
+  }
+  .project-image {
+    padding: 120px 45px;
+  }
+  .swiper-wrapper {
+    margin-bottom: 64px;
+  }
+  .project-tag {
+    padding: 18px;
+  }
+  .project-tags {
+    margin-bottom: 164px;
+  }
+  .swiper-slide-main-content {
+    padding: 64px;
+  }
+}
 
-  .swiper-slide picture {
-    width: 40%;
-    margin-left: 20px;
+@media (min-width: 1440px) {
+  .project-link {
+    padding: 18px 60px;
+  }
+  .project-image {
+    padding: 120px 37px;
+  }
+  .project-tags {
+    margin-bottom: 223px;
+  }
+  @media (min-width: 1440px) {
+    .swiper-slide-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid red; /* Тимчасова рамка для візуалізації */
+    }
+    .swiper-slide-main-content,
+    .project-image {
+      flex: 1;
+      border: 1px solid blue; /* Тимчасова рамка для візуалізації */
+    }
   }
 }
