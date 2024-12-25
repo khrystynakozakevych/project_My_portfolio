@@ -1,5 +1,4 @@
 .projects {
-  padding: 50px 20px;
   background-color: #1c1d20;
   display: flex;
   flex-direction: column;
@@ -13,6 +12,7 @@
   flex-direction: column;
   justify-content: start;
   align-items: flex-start;
+  height: 100%;
 }
 
 .projects-header {
@@ -21,7 +21,7 @@
   line-height: 150%;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: #fafafa;
+  color: rgba(250, 250, 250, 0.4);
 }
 
 .swiper {
@@ -96,19 +96,34 @@
 
 .arrow-next,
 .arrow-prev {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 50%;
+  padding: 18px;
+  width: 68px;
+  height: 68px;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 60px;
-  padding: 14px;
-  width: 52px;
-  height: 52px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.arrow-prev.swiper-button-disabled,
+.arrow-next.swiper-button-disabled {
+  opacity: 0.3; /* Робимо неактивну стрілку тьмяною */
+  pointer-events: none; /* Забороняємо кліки */
 }
 
 .arrow-next:hover,
 .arrow-prev:hover {
-  background-color: rgba(255, 255, 255, 0.7);
+  opacity: 0.7; /* Додаємо ефект при наведенні */
+}
+
+.arrow {
+  stroke: #fafafa; /* Колір стрілки */
+  width: 24px; /* Розмір стрілки */
+  height: 24px;
 }
 
 @media (max-width: 768px) {
@@ -124,7 +139,6 @@
   }
   .project-link {
     padding: 18px 50px;
-    margin-bottom: 64px;
   }
   .project-image {
     padding: 120px 45px;
@@ -153,17 +167,16 @@
   .project-tags {
     margin-bottom: 223px;
   }
-  @media (min-width: 1440px) {
-    .swiper-slide-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border: 1px solid red; /* Тимчасова рамка для візуалізації */
-    }
-    .swiper-slide-main-content,
-    .project-image {
-      flex: 1;
-      border: 1px solid blue; /* Тимчасова рамка для візуалізації */
-    }
+  .swiper-slide-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .swiper-slide-main-content,
+  .project-image {
+    width: 50%;
+  }
+  .arrows {
+    gap: 20px;
   }
 }
