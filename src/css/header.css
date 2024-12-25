@@ -66,27 +66,29 @@
     background-size: cover;
     display: flex;
     flex-direction: column;
+    
 }
 
 .hero-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     height: 100vh;
     padding-top: 281px;
     padding-bottom: 32px;
+    margin-right: auto;
+    width: 100%;
 }
 
 .hero h1 {
     font-weight: 500;
     font-size: 50px;
-
     line-height: 1;
     letter-spacing: -0.03em;
     text-transform: uppercase;
     color: #fafafa;
     text-align: left;
+    
 }
 
 
@@ -94,11 +96,11 @@
 .social-links {
     list-style: none;
     display: flex;
-    flex-direction: row;
     max-width: 100%;
     overflow: hidden;
-    margin: 0 auto;
     gap: 4px;
+    
+    
 }
 
 .nav-icon {
@@ -179,8 +181,6 @@
         display: flex;
         justify-content: space-between;
     }
-      
-
     .menu-button {
         display: none;
     
@@ -237,16 +237,23 @@
     .social-menu {
         bottom: 32px;
         right: 32px;
-        left: auto;
+        
         transform: none;
         flex-direction: row;
-        align-items: center;
+        
         gap: 8px;
     }
 
-    .social-links {
-        gap: 8px;
-    }
+   .social-links {
+       list-style: none;
+       display: flex;
+       flex-direction: row;
+       max-width: 100%;
+       overflow: hidden;
+       gap: 8px;
+       justify-content: flex-end;
+       margin: 0;
+   }
 
     .email {
         margin-left: 8px;
@@ -264,8 +271,10 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 0 px;
+        padding: 0px;
+        
     }
+    
 
     .hero h1 {
         font-family: 'Inter Tight', sans-serif;
@@ -275,6 +284,8 @@
         letter-spacing: -0.03em;
         text-transform: uppercase;
         color: #fafafa;
+       padding-left: 172px;
+       padding-right: auto;
     }
 
     /*social-menu */
@@ -287,15 +298,16 @@
         gap: 8px;
     }
 
-    .social-links {
-        list-style: none;
-        display: flex;
-        padding: 0;
-        margin: 0;
-        gap: 8px;
-        right: 32px;
-    }
-
+         .social-links {
+             list-style: none;
+             display: flex;
+             flex-direction: row;
+             max-width: 100%;
+             overflow: hidden;
+             gap: 8px;
+             justify-content: flex-end;
+             margin: 0;
+         }
     .social-links li a {
         text-decoration: none;
         color: white;
