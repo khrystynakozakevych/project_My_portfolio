@@ -1,5 +1,5 @@
 // Получение элементов
-// const pageContent = document.querySelector('.page-content');
+const footerContent = document.querySelector('.footer');
 const contactForm = document.getElementById('contactForm');
 const modal = document.getElementById('modal');
 const modalBackdrop = document.querySelector('.modal-backdrop');
@@ -10,7 +10,7 @@ function openModal() {
   modal.classList.remove('hidden');
   modal.style.opacity = '1';
   modal.style.visibility = 'visible';
-  //   pageContent.classList.add('blurred');
+  footerContent.classList.add('page-content');
 }
 
 // Функция для закрытия модального окна
@@ -18,7 +18,7 @@ function closeModal() {
   modal.classList.add('hidden');
   modal.style.opacity = '0';
   modal.style.visibility = 'hidden';
-  //   pageContent.classList.remove('blurred');
+  footerContent.classList.remove('page-content');
 }
 
 // Закрытие модального окна с клавой
@@ -56,7 +56,7 @@ contactForm.addEventListener('submit', async e => {
         } else {
           reject(new Error('Server error: Unable to process your request.'));
         }
-      }, 0); // Имитация задержки 1.5 секунды
+      }, 1000); // Имитация задержки 1 секунды
     });
 
     // Успешная отправка

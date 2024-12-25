@@ -1,4 +1,4 @@
-<footer class="footer page-content">
+<footer class="footer blure">
   <div class="container wrapper">
     <div class="logo">
       <picture>
@@ -31,36 +31,40 @@
         together
       </h1>
     </div>
-    <form class="contact-form" id="contactForm">
-      <div class="form-wrapper">
-        <input
-          class="form-email-and-tex"
-          type="email"
-          id="email"
-          placeholder="Your Email"
-          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-          required
-        />
+    <form class="contact-form" id="contactForm" name="contactForm">
+      <div class="flex-wrapper">
+        <label class="form-wrapper" for="email">
+          <input
+            class="input-textarrea-both-styles"
+            type="email"
+            id="email"
+            placeholder="Your Email"
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+            aria-label="Your email address"
+            required
+          />
+        </label>
+        <label class="form-wrapper" for="comments">
+          <textarea
+            class="input-textarrea-both-styles"
+            id="comments"
+            placeholder="Your Comments"
+            rows="1"
+            aria-label="Your comments"
+            required
+          ></textarea>
+        </label>
       </div>
-      <div class="form-wrapper">
-        <textarea
-          class="form-email-and-tex"
-          id="comments"
-          placeholder="Your Comments"
-          rows="1"
-          required
-        ></textarea>
-      </div>
-      <div class="wrapper-btn">
-        <button class="form-btn" type="submit">Send</button>
-      </div>
+      <button class="form-btn" type="submit">Send</button>
     </form>
+
     <div class="call-mail-info">
       <a class="mail-tel" href="mailto:lloydjefferson@gmail.com"
         >lloydjefferson@gmail.com</a
       >
       <a class="mail-tel" href="tel:+380 11 1111 11 11">+380 11 1111 11 11</a>
     </div>
+    <!-- модального окно -->
     <div class="modal hidden" id="modal">
       <div class="modal-backdrop"></div>
       <div class="modal-content">
