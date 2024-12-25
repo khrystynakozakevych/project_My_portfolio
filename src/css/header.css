@@ -474,6 +474,7 @@
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+  
     
     
 }
@@ -484,7 +485,8 @@
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
-        
+        transition: right 0.5s ease;
+            
     }
    .tablet-menu.active {
     display: block;
@@ -492,6 +494,7 @@
     visibility: visible;
     pointer-events: auto;
     padding-top: 0px;
+    
    }
     .nav-tablet-list {
         display: flex;
