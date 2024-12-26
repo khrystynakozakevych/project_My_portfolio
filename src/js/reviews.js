@@ -1,11 +1,12 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
+import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
 
-const slideContainer = document.querySelector('.container');
+const slideContainer = document.querySelector(".container");
 const reviemList = document.querySelector('.reviews-list');
 const notFoundLabel = document.querySelector('.not-found');
+
 
 function countSlidesPerView() {
   const containerWidth = slideContainer.clientWidth;
@@ -48,9 +49,7 @@ window.addEventListener('resize', handleResize);
 
 async function fetchReviews() {
   try {
-    const response = await fetch(
-      'https://portfolio-js.b.goit.study/api/reviews'
-    );
+    const response = await fetch("https://portfolio-js.b.goit.study/api/reviews");
     if (!response.ok) {
       throw new Error(`Error ${response.status}`);
     }
@@ -67,7 +66,7 @@ async function fetchReviews() {
   }
 }
 
-const renderReviews = data => {
+const renderReviews = (data) => {
   data.forEach(element => {
     const markup = `<li class="reviews-item swiper-slide">
       <img class="img-reviews" src="${element.avatar_url}" alt="reviews" loading="lazy" width="48" height="48"/>
@@ -76,6 +75,6 @@ const renderReviews = data => {
     </li>`;
     reviemList.insertAdjacentHTML('beforeend', markup);
   });
-};
+}
 
 fetchReviews();

@@ -1,22 +1,11 @@
-/* Загальні стилі */
 #faq {
-  width: 100%;
+  padding-bottom: 64px;
 }
-
-/* .container {
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 16px;
-  box-sizing: border-box;
-} */
 
 .container-faq {
   display: grid;
-  grid-template-columns: 1fr; /* Один стовпчик за замовчуванням */
-  gap: 0; /* Прибираємо проміжки між елементами */
-  margin-bottom: 64px;
-  /* border: 1px solid rgba(250, 250, 250, 0.2); */
-  /* Загальна рамка контейнера */
+  grid-template-columns: 1fr;
+  gap: 0;
 }
 
 .container-faq ul {
@@ -27,15 +16,13 @@
 }
 
 .faq-item {
-  background-color: #1c1d20;
-  padding: 20px;
-  border: none; /* Прибираємо межі за замовчуванням */
-  border-bottom: 1px solid rgba(250, 250, 250, 0.2); /* Загальна нижня межа */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
   position: relative;
-  /* padding-right: 60px; */
 }
 
-/*  верхня межа для першого елемента */
 .faq-item:first-child {
   border-top: 1px solid rgba(250, 250, 250, 0.2);
 }
@@ -50,90 +37,107 @@
   background: none;
   cursor: pointer;
   position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 36px;
-  height: 36px;
+  top: 20px;
+  right: 0;
+  width: 34px;
+  height: 34px;
 }
 
 .faq-icon {
   width: 20px;
   height: 20px;
-  fill: currentColor;
+  stroke: #fafafa;
+  fill: none;
 }
 
 .faq-item h3 {
   color: #fafafa;
-  margin-bottom: 16px;
-  cursor: pointer;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  display: inline-block;
+  max-width: 265px;
 }
 
 .faq-item p {
+  margin-top: 16px;
   color: rgba(250, 250, 250, 0.6);
-  display: none; /* Приховуємо параграфи за замовчуванням */
+  display: none;
 }
 
 .main-section-faq-title {
-  font: 600 16px / 1.5 'Inter Tight', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
   letter-spacing: -0.02em;
-  color: #7c7b7b;
+  color: rgba(250, 250, 250, 0.4);
   margin-bottom: 32px;
 }
 
-/* Мобільні пристрої та планшети (до 1023px) */
-@media (max-width: 1023px) {
-  .container-faq {
-    grid-template-columns: 1fr; /* Один стовбчик */
-    margin-bottom: 64px;
+@media screen and (min-width: 768px) {
+  #faq {
+    padding-bottom: 96px;
   }
 
   .faq-item {
-    border-right: none; /* Прибираємо праву межу */
-    border-left: none; /* Прибираємо ліву межу */
-    padding-right: 50px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .faq-toggle {
+    top: 32px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  .faq-item h3 {
+    max-width: 574px;
+  }
+
+  .faq-item:last-child h3 {
+    max-width: 485px;
+  }
+
+  .faq-item p {
+    margin-right: 70px;
   }
 }
 
-/* Десктопи (від 1024px) */
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
+  #faq {
+    padding-bottom: 164px;
+  }
+
   .container-faq {
-    grid-template-columns: repeat(2, 1fr); /* Дві колонки */
-    gap: 0; /* Прибираємо проміжки між колонками */
-    margin-bottom: 164px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
   }
 
   .faq-item {
     padding-right: 70px;
+    position: relative;
   }
 
-  /* Вертикальна межа між колонками */
   .faq-item:nth-child(odd) {
-    border-right: 1px solid rgba(250, 250, 250, 0.2); /* Права межа */
-    border-left: none; /* Прибираємо ліву межу */
+    border-right: 1px solid rgba(250, 250, 250, 0.2);
   }
 
   .faq-item:nth-child(even) {
-    border-left: 1px solid rgba(250, 250, 250, 0.2); /* Ліва межа */
-    border-right: none; /* Убираем правую границу */
+    padding-left: 32px;
   }
 
-  /* Нижня межа тільки для першого ряду */
-  .faq-item:nth-child(-n + 2) {
-    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-    /* Нижня межа першого ряду */
-  }
-
-  /* Встановлюємо нижню межу для останнього ряду */
   .faq-item:nth-last-child(-n + 2) {
     border-bottom: 1px solid rgba(250, 250, 250, 0.2);
   }
-  /* Встановлюємо верхню межу для першого елементу */
-  .faq-item:first-child(-n + 2) {
-    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+
+  .faq-item:nth-child(2) {
+    border-top: 1px solid rgba(250, 250, 250, 0.2);
   }
 
-  /* Встановлюємо верхню межу для четвертого елементу */
-  li:nth-child(2n) {
-    border-top: 1px solid rgba(250, 250, 250, 0.2);
+  .faq-item:nth-child(odd) .faq-toggle {
+    right: 32px;
   }
 }

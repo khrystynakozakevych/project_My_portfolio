@@ -6,11 +6,13 @@ const swiper = new Swiper('.swiper', {
     enabled: true,
     onlyInViewport: true,
   },
-  slidesPerView: 1,
-  navigation: {
-    nextEl: '.arrow-next',
-    prevEl: '.arrow-prev',
-  },
-  grabCursor: true,
-  simulateTouch: true,
-});
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.arrow-next',
+      prevEl: '.arrow-prev',
+    },
+    grabCursor: true,
+    simulateTouch: true, 
+  });
+
+
