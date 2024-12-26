@@ -1,4 +1,8 @@
 /* Hero Section */
+
+#hero {
+  margin-bottom: 64px;
+}
 .hero {
   text-align: center;
   background-image: url(../img/header/hero-bg-desk.jpg);
@@ -139,6 +143,10 @@
 
 /* Десктопна версія (1440px і більше) */
 @media (min-width: 1440px) {
+  #hero {
+    margin-bottom: 96px;
+  }
+
   .hero {
     flex-direction: row;
     justify-content: space-between;
