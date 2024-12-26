@@ -32,6 +32,7 @@
 
 .swiper-wrapper {
   display: flex;
+  border-radius: 24px;
 }
 
 .swiper-slide {
@@ -39,7 +40,14 @@
   justify-content: center;
   align-items: center;
   background-color: #242527;
+  border-radius: 24px;
 }
+/* 
+.swiper-slide-content {
+  border-radius: 24px;
+  border: red;
+  background-color: red;
+} */
 
 .project-image {
   display: flex;
