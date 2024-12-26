@@ -1,8 +1,3 @@
-/* .page-content {
-    background: linear-gradient(rgba(5, 15, 16, 0.6), rgba(5, 15, 16, 0.6));
-    transition: filter 0.3s ease;
-} */
-
 .footer {
   width: 100%;
   padding: 32px 0px 32px 0px;
@@ -61,6 +56,14 @@
   padding-bottom: 20px;
 
   width: 100%;
+}
+
+.status-message {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+  margin-top: 4px;
 }
 
 .form-btn {
@@ -252,9 +255,6 @@
     width: 100%;
   }
 
-  /* .form-btn {
-    margin-left: 86px;  remove
-  } */
 
   .call-mail-info {
     gap: 8px;
@@ -264,4 +264,4 @@
     padding: 18px 32px;
     font-size: 16px;
   }
-}
+
