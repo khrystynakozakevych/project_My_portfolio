@@ -1,0 +1,143 @@
+#faq {
+  padding-bottom: 64px;
+}
+
+.container-faq {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.container-faq ul {
+  display: contents;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.faq-item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  position: relative;
+}
+
+.faq-item:first-child {
+  border-top: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.faq-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 34px;
+  height: 34px;
+}
+
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  stroke: #fafafa;
+  fill: none;
+}
+
+.faq-item h3 {
+  color: #fafafa;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  display: inline-block;
+  max-width: 265px;
+}
+
+.faq-item p {
+  margin-top: 16px;
+  color: rgba(250, 250, 250, 0.6);
+  display: none;
+}
+
+.main-section-faq-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.4);
+  margin-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  #faq {
+    padding-bottom: 96px;
+  }
+
+  .faq-item {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .faq-toggle {
+    top: 32px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  .faq-item h3 {
+    max-width: 574px;
+  }
+
+  .faq-item:last-child h3 {
+    max-width: 485px;
+  }
+
+  .faq-item p {
+    margin-right: 70px;
+  }
+}
+
+@media (min-width: 1440px) {
+  #faq {
+    padding-bottom: 164px;
+  }
+
+  .container-faq {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .faq-item {
+    padding-right: 70px;
+    position: relative;
+  }
+
+  .faq-item:nth-child(odd) {
+    border-right: 1px solid rgba(250, 250, 250, 0.2);
+  }
+
+  .faq-item:nth-child(even) {
+    padding-left: 32px;
+  }
+
+  .faq-item:nth-last-child(-n + 2) {
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  }
+
+  .faq-item:nth-child(2) {
+    border-top: 1px solid rgba(250, 250, 250, 0.2);
+  }
+
+  .faq-item:nth-child(odd) .faq-toggle {
+    right: 32px;
+  }
+}
