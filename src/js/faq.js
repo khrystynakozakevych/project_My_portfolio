@@ -1,4 +1,4 @@
-// Импортируем библиотеку Accordion
+// Імпортуємо бібліотеку Accordion
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const content = item.querySelector('p');
       const icon = item.querySelector('.faq-icon');
 
-      // Исправление начального состояния иконок
+      // Виправлення початкового стану іконок
       if (content.style.display === 'none' || content.style.display === '') {
         icon.innerHTML =
           '<use xlink:href="./img/icons.svg#icon-arrow-bot"></use>';
@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', function () {
             '<use xlink:href="./img/icons.svg#icon-arrow-bot"></use>';
         }
       });
-
-      // Добавляем обработчик для заголовков
+      
+      // Додаємо обробник для заголовків
       const header = item.querySelector('h3');
       header.addEventListener('click', function () {
         if (content.style.display === 'none' || content.style.display === '') {
