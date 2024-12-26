@@ -1,261 +1,266 @@
-.page-content {
-    background: linear-gradient(rgba(5, 15, 16, 0.6), rgba(5, 15, 16, 0.6));
-    transition: filter 0.3s ease;
-}
-
 .footer {
-    width: 100%;
-    padding: 32px 0px 32px 0px;
+  width: 100%;
+  padding: 32px 0px 32px 0px;
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
 }
 
 .logo {
-    display: flex;
-    gap: 8px;
+  display: flex;
+  gap: 8px;
 }
 
 .logo_description {
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 1;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
 }
 
 .logo_description span {
-    color: #ed3b44;
+  color: #ed3b44;
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .flex-wrapper {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  /* add */
+  gap: 16px;
 }
 
 .input-textarrea-both-styles {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: -0.02em;
-    color: rgba(250, 250, 250, 0.6);
-    display: block;
-    background: none;
-    outline: none;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    all: unset;
-    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-    padding: 20px 0px;
-    width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+  display: block;
+  background: none;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  all: unset;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  /* change */
+  padding-bottom: 20px;
+
+  width: 100%;
+}
+
+.status-message {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+  margin-top: 4px;
 }
 
 .form-btn {
-    margin-top: 32px;
-    border-radius: 100%;
-    background-color: #ed3b44;
-    width: 100px;
-    height: 100px;
-    border: none;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    color: #fafafa;
-    transition: all 0.5s;
+  margin-top: 32px;
+  border-radius: 100%;
+  background-color: #ed3b44;
+  width: 100px;
+  height: 100px;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  transition: all 0.5s;
 }
 
 .form-btn:hover {
-    background-color: #e0373f;
+  background-color: #e0373f;
 }
 
 .call-mail-info {
-    display: flex;
-    align-items: center;
-    gap: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .mail-tel {
-    border: 1px solid rgba(250, 250, 250, 0.2);
-    border-radius: 60px;
-    padding: 10px 12px;
-    font-weight: 500;
-    font-size: 12px;
-    letter-spacing: -0.02em;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  padding: 10px 12px;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.02em;
 }
 
 /* Стили модального окна */
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    /* opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* opacity: 0;
     visibility: hidden; */
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-
 .modal.hidden {
-    opacity: 1;
-    visibility: hidden;
+  opacity: 1;
+  visibility: hidden;
 }
 
 .modal-content {
-    position: relative;
-    background-color: #1c1d20;
-    border: 1px solid rgba(250, 250, 250, 0.1);
-    padding: 63px 32px;
-    border-radius: 20px;
-    max-width: 343px;
-    text-align: center;
+  position: relative;
+  background-color: #1c1d20;
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  padding: 63px 32px;
+  border-radius: 20px;
+  max-width: 343px;
+  text-align: center;
 }
 
 .modal-title {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.5;
-    letter-spacing: -0.02em;
-    text-align: center;
-    margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 16px;
 }
 
 .modal-description {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: -0.02em;
-    text-align: center;
-    color: rgba(250, 250, 250, 0.6);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: rgba(250, 250, 250, 0.6);
 }
 
 .modal-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    color: #fafafa;
-    font-size: 30px;
-    cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #fafafa;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .modal-backdrop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
 }
 
 @media only screen and (min-width: 768px) {
-    .wrapper {
-        gap: 12px;
-    }
+  .wrapper {
+    /* change */
+    gap: 18px;
+  }
 
-    .logo {
-        gap: 20px;
-    }
+  .logo {
+    gap: 20px;
+  }
 
-    .logo_description {
-        font-size: 64px;
-    }
+  .logo_description {
+    font-size: 64px;
+  }
 
-    .contact-form {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 32px;
-    }
+  .contact-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
 
-    .flex-wrapper {
-        flex-direction: row;
-        gap: 32px;
-    }
+  .flex-wrapper {
+    flex-direction: row;
+    gap: 32px;
+  }
 
-    .input-textarrea-both-styles {
-        width: 245px;
-    }
+  .input-textarrea-both-styles {
+    width: 245px;
+  }
 
-    .form-btn {
-        width: 150px;
-        height: 150px;
+  .form-btn {
+    width: 150px;
+    height: 150px;
+    /* add */
+    margin-top: 0;
+  }
 
-    }
+  .call-mail-info {
+    gap: 8px;
+  }
 
-    .call-mail-info {
-        gap: 8px;
-    }
+  .mail-tel {
+    padding: 18px 32px;
+    font-size: 16px;
+  }
 
-    .mail-tel {
-        padding: 18px 32px;
-        font-size: 16px;
-    }
+  .modal-content {
+    max-width: 492px;
+    padding: 63px;
+  }
 
-
-    .modal-content {
-        max-width: 492px;
-        padding: 63px;
-
-    }
-
-    .modal-description {
-        max-width: 315px;
-        margin: 0 auto;
-    }
-
+  .modal-description {
+    max-width: 315px;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    .wrapper {
-        /* width: 1047px; */
-    }
+  .wrapper {
+    /* change */
+    width: 1112px;
+    padding-top: 80px;
+    padding-bottom: 169px;
+  }
 
-    .footer {
-        width: 100%;
-        padding: 32px 0px 32px 0px;
-    }
+  .footer {
+    width: 100%;
+    padding: 32px 0px 32px 0px;
+  }
 
-    .logo {
-        gap: 20px;
-    }
+  .logo {
+    gap: 20px;
+  }
 
-    .contact-form {
-        gap: 32px;
-    }
+  .contact-form {
+    /* change */
+    gap: 86px;
+  }
 
-    .form-wrapper {
-        width: 390px;
-    }
+  .form-wrapper {
+    width: 390px;
+  }
 
-    .input-textarrea-both-styles {
-        width: 100%;
-    }
+  .input-textarrea-both-styles {
+    width: 100%;
+  }
 
-    .form-btn {
-        margin-left: 86px;
-    }
+  .call-mail-info {
+    gap: 8px;
+  }
 
-    .call-mail-info {
-        gap: 8px;
-    }
-
-    .mail-tel {
-        padding: 18px 32px;
-        font-size: 16px;
-    }
+  .mail-tel {
+    padding: 18px 32px;
+    font-size: 16px;
+  }
 }
