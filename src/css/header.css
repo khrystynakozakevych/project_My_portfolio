@@ -284,4 +284,12 @@
   .nav-tablet-list li {
     margin-bottom: 3px;
   }
+
+  .nav-tablet-list li a {
+    transition: color 0.3s ease;
+  }
+
+  .nav-tablet-list li:hover a {
+    color: #ed3b44;
+  }
 }
