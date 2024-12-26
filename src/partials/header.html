@@ -1,50 +1,63 @@
 <!-- Header -->
 
 <header class="header">
-    <div class="container header-container">
+  <div class="container header-container">
+    <ul class="header-list">
+      <li class="header-list-item">
         <a class="header-logo" href="./index.html">
-            <picture>
-                <source srcset="
-            ./img/header/logo-img.png    1x,
-            ./img/header/logo-img-2x.png 2x
-          " type="image/png" />
-                <source srcset="
-            ./img/header/logo-img.webp    1x,
-            ./img/header/logo-img-2x.webp 2x
-          " type="image/webp" />
+          <picture>
+            <source
+              srcset="
+                ./img/header/logo-img.png    1x,
+                ./img/header/logo-img-2x.png 2x
+              "
+              type="image/png"
+            />
+            <source
+              srcset="
+                ./img/header/logo-img.webp    1x,
+                ./img/header/logo-img-2x.webp 2x
+              "
+              type="image/webp"
+            />
 
-        <img
-          loading="lazy"
-          src="./img/header/logo-img.png"
-          alt="Profile Picture"
-        />
-      </picture>
-      <svg class="header-icon" width="84" height="19">
-        <use href="./img/icons.svg#icon-jefferson"></use>
-      </svg>
-    </a>
-
-    <div class="tablet-menu-block">
-      <button class="menu-text" aria-label="Open Menu">Menu</button>
-      <div class="tablet-menu">
-        <nav class="nav-tablet">
-          <ul class="nav-tablet-list">
-            <li><a href="#abt-me-section">About me</a></li>
-            <li><a href="#benefits">Benefits</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#faq">FAQ</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-    <button class="menu-button" aria-label="Open Menu">
-      <svg class="icon-burger" width="24" height="24">
-        <use href="./img/icons.svg#icon-menu-burger"></use>
-      </svg>
-    </button>
-    <a href="#work-together">
-      <button class="order-button">Order the project</button>
-    </a>
+            <img
+              loading="lazy"
+              src="./img/header/logo-img.png"
+              alt="Profile Picture"
+            />
+          </picture>
+          <svg class="header-icon" width="84" height="19">
+            <use href="./img/icons.svg#icon-jefferson"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="header-list-item">
+        <div class="tablet-menu">
+          <p class="header-navigation-title">Menu</p>
+          <nav class="nav-tablet">
+            <ul class="nav-tablet-list">
+              <li><a href="#abt-me-section">About me</a></li>
+              <li><a href="#benefits">Benefits</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </nav>
+        </div>
+      </li>
+      <li class="header-list-item">
+        <button class="menu-button" aria-label="Open Menu">
+          <svg class="icon-burger" width="24" height="24">
+            <use href="./img/icons.svg#icon-menu-burger"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="header-list-item">
+        <a href="#work-together">
+          <button class="order-button">Order the project</button>
+        </a>
+      </li>
+    </ul>
   </div>
 
   <!-- Mobile menu -->
@@ -75,5 +88,7 @@
         <a href="#work-together" class="order-project-anchor">
           <button class="order-project-btn">Order the project</button>
         </a>
+      </div>
     </div>
+  </div>
 </header>
