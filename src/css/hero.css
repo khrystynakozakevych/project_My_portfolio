@@ -5,12 +5,20 @@
 }
 .hero {
   text-align: center;
-  background-image: url(../img/header/hero-bg-desk.jpg);
+  background-image: url(../img/header/Hero.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx),
+  (min-resolution: 192dpi) {
+  .hero {
+    background-image: url(../img/header/Hero-2x.png);
+  }
 }
 
 .hero-container {
