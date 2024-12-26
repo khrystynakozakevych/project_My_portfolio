@@ -3,13 +3,6 @@
   margin-bottom: 64px;
 }
 
-.container {
-  max-width: 320px;
-  margin: 0 auto;
-  padding: 0 16px;
-  box-sizing: border-box;
-}
-
 .container-faq {
   display: grid;
   grid-template-columns: 1fr; /* Один стовпчик за замовчуванням */
@@ -67,6 +60,9 @@
   color: #fafafa;
   margin-bottom: 16px;
   cursor: pointer;
+  word-wrap: break-word; /* Разрешаем перенос длинного текста */
+  overflow-wrap: break-word;
+  white-space: normal; /* Убираем запрет на перенос текста */
 }
 
 .faq-item p {
@@ -82,9 +78,9 @@
 }
 
 /* #endregion Cтилі моб. девайсів */
-/* #region Стилі для планшетів (до 1023px) */
+/* #region Стилі для планшетів (мін. ширина 768px) */
 
-@media (max-width: 1023px) {
+@media (min-width: 768px) {
   .container-faq {
     grid-template-columns: 1fr; /* Один стовбчик */
     margin-bottom: 96px;
@@ -93,28 +89,42 @@
   .faq-item {
     border-right: none; /* Прибираємо праву межу */
     border-left: none; /* Прибираємо ліву межу */
-    padding-right: 50px;
+    padding-right: 60px;
+    position: relative; /* Для абсолютного позиционирования кнопки */
+  }
+
+  .faq-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Расстояние от правого края */
+    transform: translateY(-50%); /* Центрирование кнопки по вертикали */
+    width: 36px;
+    height: 36px;
+  }
+
+  .faq-item h3 {
+    margin-right: 70px; /* Отступ текста от кнопки */
+  }
+
+  .faq-item p {
+    margin-right: 70px; /* Чтобы текст параграфа тоже не налезал на кнопку */
   }
 }
 
-/* #endregion Стилі для планшетів (до 1023px) */
-/* #region Стилі для десктопів (від 1024px) */
+/* #endregion Стилі для планшетів (мін. ширина 768px) */
+/* #region Стилі для десктопів (від 1440px) */
 
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1980px;
-    margin: 0 auto;
-    padding: 0 16px;
-    box-sizing: border-box;
-  }
+@media (min-width: 1440px) {
   .container-faq {
     grid-template-columns: repeat(2, 1fr); /* Дві колонки */
     gap: 0; /* Прибираємо проміжки між колонками */
     margin-bottom: 164px;
+    max-width: 1980px;
   }
 
   .faq-item {
     padding-right: 70px;
+    position: relative; /* Для абсолютного позиционирования кнопки */
   }
 
   /* Вертикальна межа між колонками */
