@@ -164,7 +164,7 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  background-image: url(../img/header/Hero.png);
+  background-image: url(/img/header/hero-mob.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -177,7 +177,7 @@
   (min-resolution: 2dppx),
   (min-resolution: 192dpi) {
   .mobile-menu {
-    background-image: url(/img/header/Hero-2x.png);
+    background-image: url(/img/header/hero-mob.png);
   }
 }
 

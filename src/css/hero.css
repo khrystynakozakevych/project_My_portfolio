@@ -1,7 +1,7 @@
 /* Hero Section */
 .hero {
   text-align: center;
-  background-image: url(/img/header/Hero.png);
+  background-image: url(/img/header/hero-mob.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -13,7 +13,7 @@
   (min-resolution: 2dppx),
   (min-resolution: 192dpi) {
   .hero {
-    background-image: url(/img/header/Hero-2x.png);
+    background-image: url(/img/header/hero-mob.png);
   }
 }
 
@@ -60,7 +60,6 @@
   align-items: center;
   justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(100px);
 }
 
 .email {
@@ -97,6 +96,18 @@
 
 /* Планшетна версія (768px і більше) */
 @media (min-width: 768px) {
+  .hero {
+    background-image: url(/img/header/hero-tab.png);
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+    .hero {
+      background-image: url(/img/header/hero-tab.png);
+    }
+  }
+
   .hero-container {
     height: 1024px;
     padding-top: 300px;
@@ -135,6 +146,15 @@
     justify-content: space-between;
     align-items: center;
     padding: 0px;
+    background-image: url(/img/header/hero-desk.png);
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+    .hero {
+      background-image: url(/img/header/hero-desk.png);
+    }
   }
 
   .hero h1 {
