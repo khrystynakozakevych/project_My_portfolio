@@ -1,5 +1,9 @@
+#covers {
+  margin-top: 64px;
+}
+
 .covers-section {
-  background-image: url(../img/covers/covers-bcg.png);
+  background-image: url(/img/covers/covers-bcg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -78,5 +82,16 @@
   .marquee__inner {
     margin-bottom: 40px;
     height: 314px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #covers {
+    margin-top: 96px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  #covers {
+    margin-top: 164px;
   }
 }
