@@ -12,6 +12,17 @@
   position: relative;
 }
 
+.header-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-list-item:nth-child(2),
+.header-list-item:nth-child(4) {
+  display: none;
+}
+
 .header-logo {
   display: flex;
   gap: 8px;
@@ -22,10 +33,6 @@
   fill: white;
   margin: 0;
   stroke: #fafafa;
-}
-
-.menu-text {
-  display: none;
 }
 
 .menu-button {
@@ -52,90 +59,19 @@
   transform: scale(0.9);
 }
 
-/* Hero Section */
-.hero {
-  text-align: center;
-  background-image: url(../img/header/hero-bg-desk.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-}
-
-.hero-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-  padding-top: 281px;
-  padding-bottom: 32px;
-  margin-right: auto;
-  width: 100%;
-}
-
-.menu-text {
-  display: block;
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: capitalize;
-  color: white;
-  cursor: pointer;
-  text-decoration: underline;
-  background-color: transparent;
-  padding-bottom: 0;
-  border: none;
-  text-align: center;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin-bottom: 0px;
-  align-self: flex-start;
-  padding: 10px;
-}
-
-.nav-icon {
-  width: 37px;
-  height: 37px;
-}
-
-.order-button {
-  display: block;
-  font-size: 16px;
-  padding: 18px 24px;
-  background: #ed3b44;
-  border-radius: 60px;
-  width: 223px;
-  height: 55px;
-}
-
-.social-links li a {
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: -0.02em;
-  color: #fafafa;
-  border: none;
-  transition: background 0.3s ease;
-}
-.menu-text:hover {
-  color: #ed3b44;
-}
-
-.order-button:hover {
-  background: #d12c2c;
-}
-
 /* Планшетна версія (768px і більше) */
 @media (min-width: 768px) {
   .header-container {
     display: flex;
     justify-content: space-between;
   }
-  .menu-button {
-    display: none;
+
+  .header-list-item:nth-child(2),
+  .header-list-item:nth-child(4) {
+    display: block;
   }
 
-  .menu-text {
-    display: flex;
+  .header-navigation-title {
     font-size: 16px;
     font-weight: bold;
     text-transform: capitalize;
@@ -144,14 +80,44 @@
     text-decoration: underline;
     background-color: transparent;
     padding-bottom: 0;
-    top: 42px;
     border: none;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease;
     margin-bottom: 0px;
   }
 
-  /* Кнопка "Order the Project" */
+  .nav-tablet {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .nav-tablet.active {
+    display: block;
+    margin-top: 18px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    padding-top: 0px;
+  }
+  .nav-tablet-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    text-decoration-skip-ink: none;
+    color: #fafafa;
+  }
+
+  .header-list-item:nth-child(3) {
+    display: none;
+  }
+
   .order-button {
     display: inline-block;
     font-size: 16px;
@@ -171,41 +137,6 @@
   .order-button:hover {
     background: #b21d1d;
   }
-
-  .hero h1 {
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 500;
-    font-size: 90px;
-    line-height: 100%;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
-    color: #fafafa;
-  }
-
-  .social-menu {
-    bottom: 32px;
-    right: 32px;
-
-    transform: none;
-    flex-direction: row;
-
-    gap: 8px;
-  }
-
-  .social-links {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    max-width: 100%;
-    overflow: hidden;
-    gap: 8px;
-    justify-content: flex-end;
-    margin: 0;
-  }
-
-  .email {
-    margin-left: 8px;
-  }
 }
 
 /* Десктопна версія (1440px і більше) */
@@ -215,14 +146,8 @@
   }
 
   .order-button {
-    font-family: Inter Tight;
     font-size: 16px;
-    font-weight: 500;
-    line-height: 1.21em;
-    letter-spacing: -0.02em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
+    padding: 12px 24px;
   }
 }
 
@@ -235,10 +160,11 @@
   width: 100%;
   height: 100vh;
   padding-top: 302px;
+  padding-bottom: 64px;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  background-image: url(/img/header/Hero.png);
+  background-image: url(../img/header/Hero.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -250,7 +176,7 @@
 @media screen and (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 2dppx),
   (min-resolution: 192dpi) {
-  .hero {
+  .mobile-menu {
     background-image: url(/img/header/Hero-2x.png);
   }
 }
@@ -263,14 +189,6 @@
 
 .mobile-menu-container {
   height: 446px;
-}
-
-.nav-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
 }
 
 .close-menu {
@@ -302,16 +220,24 @@
   transition: fill 0.3s ease;
 }
 
-.mobile-menu nav ul {
+.nav-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-list {
   list-style: none;
   text-align: center;
 }
 
-.mobile-menu nav ul li {
+.nav-list-item {
   margin: 10px 0;
 }
 
-.mobile-menu nav ul li a {
+.nav-list-item-link {
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.02em;
@@ -321,7 +247,7 @@
   transition: color 0.3s ease;
 }
 
-.mobile-menu nav ul li a:hover {
+.nav-list-item-link:hover {
   color: #ff6b6b;
 }
 
@@ -352,50 +278,4 @@
   border: none;
   color: white;
   cursor: pointer;
-}
-
-/* Tablet menu */
-.tablet-menu {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 300ms ease, visibility 300ms ease;
-  position: absolute;
-  width: 100px;
-  top: 40px;
-  translate: -50%;
-  left: 50%;
-  position: absolute;
-  padding-top: 0px;
-}
-
-@media only screen and (min-width: 768px) {
-  .tablet-menu-block {
-    position: relative;
-  }
-  .tablet-menu.active {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-  .nav-tablet-list {
-    text-align: center;
-    align-items: center;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    text-decoration-skip-ink: none;
-    color: #fafafa;
-  }
-  .nav-tablet-list li {
-    margin-bottom: 3px;
-  }
-
-  .nav-tablet-list li a {
-    transition: color 0.3s ease;
-  }
-
-  .nav-tablet-list li:hover a {
-    color: #ed3b44;
-  }
 }
