@@ -1,0 +1,275 @@
+/* Header */
+.header {
+  background-color: transparent;
+  width: 100%;
+  margin-top: 32px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.header-container {
+  position: relative;
+}
+
+.header-logo {
+  display: flex;
+  gap: 8px;
+  width: 172px;
+}
+
+.header-icon {
+  fill: white;
+  margin: 0;
+  stroke: #fafafa;
+}
+
+.menu-text {
+  display: none;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  top: 0;
+  right: 20px;
+}
+
+.icon-burger {
+  stroke: white;
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.menu-button:hover .icon-burger {
+  stroke: #ff6b6b;
+  transform: scale(1.1);
+}
+
+.menu-button:active .icon-burger {
+  transform: scale(0.9);
+}
+
+.order-button {
+  display: none;
+}
+
+/* Планшетна версія (768px і більше) */
+@media (min-width: 768px) {
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu-text {
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+    background-color: transparent;
+    padding-bottom: 0;
+    top: 42px;
+    border: none;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 0px;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .order-button {
+    display: inline-block;
+    font-size: 16px;
+    padding: 18px 24px;
+    background: #ed3b44;
+    border-radius: 60px;
+    width: 163px;
+    height: 55px;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+    border: none;
+    transition: background 0.3s ease;
+  }
+
+  .order-button:hover {
+    background: #b21d1d;
+  }
+}
+
+/* Десктопна версія (1440px і більше) */
+@media (min-width: 1440px) {
+  .menu-text {
+    font-size: 18px;
+  }
+
+  .order-button {
+    font-size: 18px;
+    padding: 12px 24px;
+    position: absolute;
+    right: 60px;
+    top: 30px;
+  }
+}
+
+/* Mobile menu */
+.mobile-menu {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding-top: 302px;
+  padding-bottom: 64px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background-image: url(../img/header/hero-bg-mob.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 999;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-menu-container {
+  height: 446px;
+}
+
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  width: 28px;
+  height: 28px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.close-menu:hover {
+  background-color: #d12c2c;
+  transform: scale(1.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-menu:active {
+  transform: scale(0.9);
+}
+
+.close-menu .close-icon {
+  stroke: white;
+  transition: fill 0.3s ease;
+}
+
+.nav-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-list {
+  list-style: none;
+  text-align: center;
+}
+
+.nav-list-item {
+  margin: 10px 0;
+}
+
+.nav-list-item-link {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #fafafa;
+  transition: color 0.3s ease;
+}
+
+.nav-list-item-link:hover {
+  color: #ff6b6b;
+}
+
+.order-project-btn {
+  padding: 14px 32px;
+  font-size: 16px;
+  color: white;
+  background: #ed3b44;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+.mobile-menu .order-project-btn:hover {
+  background: #d12c2c;
+}
+
+/* Іконка меню */
+.menu-icon {
+  display: block;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Tablet menu */
+.tablet-menu {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .tablet-menu.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    padding-top: 0px;
+    position: absolute;
+    left: 47.8%;
+    top: 35px;
+  }
+  .nav-tablet-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    text-decoration-skip-ink: none;
+    color: #fafafa;
+  }
+}

@@ -255,6 +255,7 @@
     width: 100%;
   }
 
+
   .call-mail-info {
     gap: 8px;
   }
@@ -263,4 +264,4 @@
     padding: 18px 32px;
     font-size: 16px;
   }
-}
+

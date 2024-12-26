@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
             '<use xlink:href="./img/icons.svg#icon-arrow-bot"></use>';
         }
       });
-
+      
       // Додаємо обробник для заголовків
       const header = item.querySelector('h3');
       header.addEventListener('click', function () {
