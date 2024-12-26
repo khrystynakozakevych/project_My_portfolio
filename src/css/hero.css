@@ -24,7 +24,6 @@
   height: 812px;
   padding-top: 281px;
   padding-bottom: 32px;
-  /* margin-right: auto; */
   width: 100%;
 }
 
@@ -100,6 +99,7 @@
 @media (min-width: 768px) {
   .hero-container {
     height: 1024px;
+    padding-top: 300px;
   }
 
   .hero h1 {
