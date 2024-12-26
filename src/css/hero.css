@@ -1,4 +1,8 @@
 /* Hero Section */
+
+#hero {
+  margin-bottom: 64px;
+}
 .hero {
   text-align: center;
   background-image: url(../img/header/hero-bg-desk.jpg);
@@ -13,7 +17,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 812px;
   padding-top: 281px;
   padding-bottom: 32px;
   /* margin-right: auto; */
@@ -28,70 +31,81 @@
   text-transform: uppercase;
   color: #fafafa;
   text-align: left;
+  padding-bottom: 212px;
 }
 
 .social-links {
   list-style: none;
   display: flex;
   max-width: 100%;
-  overflow: hidden;
+  justify-content: center;
   gap: 4px;
-}
-
-.hero-social {
-  width: 37px;
-  height: 37px;
+  flex-wrap: wrap;
 }
 
 .link-icon {
+  border-radius: 50%;
   border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 60px;
-  padding: 10px 8px;
-  width: 37px;
-  height: 37px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  position: relative;
+  width: 36px;
+  height: 36px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(100px);
+}
+.social-icon-text {
+  font-family: Inter Tight;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.21em;
+  letter-spacing: -0.02em;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
 }
 
 .email {
+  font-family: Inter Tight;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.21em;
+  letter-spacing: -0.02em;
+
+  border: 1px solid #fafafa33;
+  border-radius: 60px;
+  padding: 0 11px;
+  transition: border-color 0.3s ease;
+  display: block;
+  height: 100%;
+  min-height: 37px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 60px;
-  background-color: transparent;
-  padding: 10px 12px;
-  width: 178px;
-  height: 37px;
-  transition: all 0.3s ease;
+}
+
+.email span {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
+  line-height: 1.21em;
   color: #fafafa;
-  height: 37px;
-  box-sizing: border-box;
 }
 
 .email:hover {
   border: 1px solid #fafafa;
   border-radius: 60px;
-  width: 223px;
-  height: 55px;
 }
 
 .link-icon:hover,
 .email:hover {
-  color: #ff6b6b;
+  border-color: #fafafa;
 }
 
 /* Планшетна версія (768px і більше) */
 @media (min-width: 768px) {
   .hero-container {
-    height: 1024px;
+    padding-top: 300px;
   }
 
   .hero h1 {
@@ -102,26 +116,37 @@
     letter-spacing: -0.03em;
     text-transform: uppercase;
     color: #fafafa;
+    padding-bottom: 187px;
   }
 
   .social-links {
     list-style: none;
-    display: flex;
-    flex-direction: row;
     max-width: 100%;
-    overflow: hidden;
     gap: 8px;
     justify-content: flex-end;
     margin: 0;
   }
 
-  .email {
-    margin-left: 8px;
+  .link-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .social-icon-text {
+    font-size: 16px;
+  }
+
+  .email span {
+    font-size: 16px;
   }
 }
 
 /* Десктопна версія (1440px і більше) */
 @media (min-width: 1440px) {
+  #hero {
+    margin-bottom: 96px;
+  }
+
   .hero {
     flex-direction: row;
     justify-content: space-between;
@@ -137,33 +162,8 @@
     letter-spacing: -0.03em;
     text-transform: uppercase;
     color: #fafafa;
-    padding-left: 172px;
-    padding-right: auto;
-  }
-
-  .social-links {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    max-width: 100%;
-    overflow: hidden;
-    gap: 8px;
-    justify-content: flex-end;
-    margin: 0;
-  }
-  .link-icon {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-
-  .email {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    margin-left: 8px;
+    margin: auto;
+    max-width: 1084px;
+    padding-bottom: 243px;
   }
 }

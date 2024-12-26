@@ -167,6 +167,10 @@
   stroke: #3b3b3b;
 }
 
+.skills-swiper .swiper-wrapper {
+  margin: 0;
+}
+
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
   #abt-me-section {
