@@ -2,7 +2,6 @@
 
 #abt-me-section {
   margin-bottom: 64px;
-  background-color: #1c1d20;
 }
 
 .text-block p {
@@ -58,7 +57,7 @@
 }
 
 .accordion-block .ac-trigger[aria-expanded='true'] svg {
-  rotate: -180deg;
+  rotate: 180deg;
 }
 
 .accordion-block .ac-trigger::after {
