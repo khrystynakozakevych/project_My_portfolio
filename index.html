@@ -21,7 +21,7 @@
     <script type="module" crossorigin src="/project_My_portfolio/index.js"></script>
     <link rel="modulepreload" crossorigin href="/project_My_portfolio/assets/vendor-CTqzIL4Y.js">
     <link rel="stylesheet" crossorigin href="/project_My_portfolio/assets/vendor-CzG10Eoq.css">
-    <link rel="stylesheet" crossorigin href="/project_My_portfolio/assets/index-CrSIikIA.css">
+    <link rel="stylesheet" crossorigin href="/project_My_portfolio/assets/index-0Bd7K8TN.css">
   </head>
   <body>
     
@@ -195,7 +195,83 @@
       
     </main>
 
-    
+    <footer class="footer blure">
+  <div class="container wrapper">
+    <div class="logo">
+      <a href="../index.html" class="footer-anchor">
+        <picture>
+          <source
+            media="(min-width: 376px)"
+            srcset="../img/footer/footer-logo-desk.webp 1x, ../img/footer/footer-logo-desk-2x.webp 2x"
+          />
+          <source
+            media="(max-width: 375px)"
+            width="44"
+            height="44"
+            srcset="../img/footer/footer-logo-mob.webp 1x, ../img/footer/footer-logo-mob-2x.webp 2x"
+          />
+          <img
+            src="../img/footer/footer-logo-desk.webp"
+            width="70"
+            height="70"
+            alt="footer-logo-desk"
+            loading="lazy"
+          />
+        </picture>
+      </a>
+      <h1 class="logo_description">
+        Let’s <span>work</span> <br />
+        together
+      </h1>
+    </div>
+    <form class="contact-form" id="contactForm" name="contactForm" novalidate>
+      <div class="flex-wrapper">
+        <label class="form-wrapper" for="email">
+          <input
+            class="input-textarrea-both-styles"
+            type="email"
+            id="email"
+            placeholder="Your Email"
+            aria-label="Your email address"
+            required
+          />
+          <p class="status-message" id="statusMessage"></p>
+        </label>
+        <label class="form-wrapper" for="comments">
+          <textarea
+            class="input-textarrea-both-styles"
+            id="comments"
+            placeholder="Your Comments"
+            rows="1"
+            aria-label="Your comments"
+            required
+          ></textarea>
+        </label>
+      </div>
+      <button class="form-btn" type="submit">Send</button>
+    </form>
+
+    <div class="call-mail-info">
+      <a class="mail-tel" href="mailto:lloydjefferson@gmail.com"
+        >lloydjefferson@gmail.com</a
+      >
+      <a class="mail-tel" href="tel:+380 11 1111 11 11">+380 11 1111 11 11</a>
+    </div>
+    <!-- модального окно -->
+    <div class="modal hidden" id="modal">
+      <div class="modal-backdrop"></div>
+      <div class="modal-content">
+        <h2 class="modal-title">Thank you for your interest in cooperation!</h2>
+        <p class="modal-description">
+          The manager will contact you shortly to discuss further details
+          regarding your request. Please stay in touch.
+        </p>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
 
   </body>
 </html>
