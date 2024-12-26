@@ -1,0 +1,139 @@
+/* Загальні стилі */
+#faq {
+  width: 100%;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.container-faq {
+  display: grid;
+  grid-template-columns: 1fr; /* Один стовпчик за замовчуванням */
+  gap: 0; /* Прибираємо проміжки між елементами */
+  margin-bottom: 64px;
+  /* border: 1px solid rgba(250, 250, 250, 0.2); */
+  /* Загальна рамка контейнера */
+}
+
+.container-faq ul {
+  display: contents;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.faq-item {
+  background-color: #1c1d20;
+  padding: 20px;
+  border: none; /* Прибираємо межі за замовчуванням */
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2); /* Загальна нижня межа */
+  position: relative;
+  /* padding-right: 60px; */
+}
+
+/*  верхня межа для першого елемента */
+.faq-item:first-child {
+  border-top: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.faq-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+}
+
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.faq-item h3 {
+  color: #fafafa;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.faq-item p {
+  color: rgba(250, 250, 250, 0.6);
+  display: none; /* Приховуємо параграфи за замовчуванням */
+}
+
+.main-section-faq-title {
+  font: 600 16px / 1.5 'Inter Tight', sans-serif;
+  letter-spacing: -0.02em;
+  color: #7c7b7b;
+  margin-bottom: 32px;
+}
+
+/* Мобільні пристрої та планшети (до 1023px) */
+@media (max-width: 1023px) {
+  .container-faq {
+    grid-template-columns: 1fr; /* Один стовбчик */
+    margin-bottom: 64px;
+  }
+
+  .faq-item {
+    border-right: none; /* Прибираємо праву межу */
+    border-left: none; /* Прибираємо ліву межу */
+    padding-right: 50px;
+  }
+}
+
+/* Десктопи (від 1024px) */
+@media (min-width: 1024px) {
+  .container-faq {
+    grid-template-columns: repeat(2, 1fr); /* Дві колонки */
+    gap: 0; /* Прибираємо проміжки між колонками */
+    margin-bottom: 164px;
+  }
+
+  .faq-item {
+    padding-right: 70px;
+  }
+
+  /* Вертикальна межа між колонками */
+  .faq-item:nth-child(odd) {
+    border-right: 1px solid rgba(250, 250, 250, 0.2); /* Права межа */
+    border-left: none; /* Прибираємо ліву межу */
+  }
+
+  .faq-item:nth-child(even) {
+    border-left: 1px solid rgba(250, 250, 250, 0.2); /* Ліва межа */
+    border-right: none; /* Убираем правую границу */
+  }
+
+  /* Нижня межа тільки для першого ряду */
+  .faq-item:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+    /* Нижня межа першого ряду */
+  }
+
+  /* Встановлюємо нижню межу для останнього ряду */
+  .faq-item:nth-last-child(-n + 2) {
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  }
+  /* Встановлюємо верхню межу для першого елементу */
+  .faq-item:first-child(-n + 2) {
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  }
+
+  /* Встановлюємо верхню межу для четвертого елементу */
+  li:nth-child(2n) {
+    border-top: 1px solid rgba(250, 250, 250, 0.2);
+  }
+}

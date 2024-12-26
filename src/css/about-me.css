@@ -1,0 +1,246 @@
+/* Styles for Mobile devices */
+
+#abt-me-section {
+  margin-bottom: 64px;
+}
+
+.text-block p {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.17em;
+  letter-spacing: -0.03em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #fafafa;
+}
+
+.text-block p span:first-child {
+  color: #ed3b44;
+}
+
+.text-block p span:first-child + span {
+  color: #fafafa66;
+}
+
+.image-block img {
+  border-radius: 24px;
+}
+
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  padding-bottom: 32px;
+}
+
+.text-block {
+  height: 500px;
+  background-color: #242527;
+  padding: 32px;
+  border-radius: 24px;
+}
+
+/* Accordion styles */
+.accordion-block {
+  margin-bottom: 32px;
+}
+
+.accordion-block .ac-trigger svg {
+  display: block;
+  stroke: #fafafa;
+  fill: none;
+}
+
+.accordion-block:not(.no-animation) svg {
+  transition: rotate ease 600ms;
+}
+
+.accordion-block .ac-trigger[aria-expanded='true'] svg {
+  rotate: 180deg;
+}
+
+.accordion-block .ac-trigger::after {
+  display: none;
+}
+
+.accordion-block .ac .ac-trigger {
+  display: block;
+  display: inline-block;
+  width: auto;
+  padding: 10px;
+  border: 1px solid #fafafa33;
+  background-color: #1c1d20;
+  border-radius: 50%;
+}
+
+.accordion-block .ac-header {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5em;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #fafafa66;
+}
+
+.accordion-block .ac {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fafafa33;
+  margin: 0;
+  padding-bottom: 32px;
+}
+
+.accordion-block .ac:not(:first-child) {
+  padding-top: 20px;
+}
+
+.accordion-block .ac-text li:not(:last-child) {
+  margin-bottom: 32px;
+}
+.accordion-block .ac .ac-panel .ac-text {
+  padding: 0;
+  color: #fafafa;
+  font-family: 'Inter Tight', serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: -0.02em;
+}
+
+.accordion-block .ac .ac-panel {
+  padding-top: 12px;
+}
+
+.skills-swiper .swiper-slide {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border: 1px solid #fafafa33;
+  border-radius: 50%;
+}
+
+.skills-swiper .swiper-slide-active {
+  background-color: #ed3b44;
+  border: none;
+}
+
+.skills-swiper .slide-text {
+  font-family: Inter Tight;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: -0.02em;
+  text-align: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  translate: -50% -50%;
+}
+.skills-swiper-block {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+}
+.skills-swiper {
+  width: 260px;
+  overflow: hidden;
+}
+
+.swiper-next-skill {
+  display: block;
+  border: none;
+  padding: 0;
+  background-color: inherit;
+}
+
+.swiper-next-skill svg {
+  display: block;
+  fill: none;
+  stroke: #3b3b3b;
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  #abt-me-section {
+    margin-bottom: 96px;
+  }
+  .text-block {
+    height: 700px;
+  }
+  .text-block p {
+    font-size: 38px;
+    line-height: 1.05em;
+  }
+  .banner {
+    padding-bottom: 64px;
+  }
+  .accordion-block {
+    margin-bottom: 64px;
+  }
+
+  .accordion-block .ac:not(:first-child) {
+    padding-top: 32px;
+  }
+
+  .accordion-block .ac .ac-panel {
+    padding-top: 8px;
+  }
+
+  .accordion-block .ac-text li:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  .skills-swiper .swiper-slide {
+    width: 200px;
+    height: 200px;
+  }
+  .skills-swiper .slide-text {
+    font-size: 20px;
+    line-height: 1.2em;
+    letter-spacing: -0.02em;
+  }
+
+  .skills-swiper {
+    width: 600px;
+  }
+
+  .swiper-next-skill svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {
+  #abt-me-section {
+    margin-bottom: 164px;
+  }
+  .banner {
+    gap: 0;
+    padding-bottom: 64px;
+  }
+  .text-block {
+    width: 680px;
+  }
+  .image-block img {
+    max-width: 680px;
+  }
+
+  .accordion-block .ac .ac-panel .ac-text {
+    margin-left: 696px;
+    width: 612px;
+  }
+  .skills-swiper {
+    width: 1200px;
+  }
+  .skills-swiper-block {
+    padding: 0 32px;
+  }
+}
