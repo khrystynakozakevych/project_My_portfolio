@@ -61,10 +61,10 @@
 
 /* Планшетна версія (768px і більше) */
 @media (min-width: 768px) {
-  .header-container {
+  /* .header-container {
     display: flex;
     justify-content: space-between;
-  }
+  } */
 
   .header-list-item:nth-child(2),
   .header-list-item:nth-child(4) {
@@ -73,7 +73,7 @@
 
   .header-navigation-title {
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 500;
     text-transform: capitalize;
     color: white;
     cursor: pointer;
