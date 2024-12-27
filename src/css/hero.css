@@ -43,6 +43,8 @@
   max-width: 100%;
   overflow: hidden;
   gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hero-social {
@@ -61,7 +63,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .email {
@@ -75,7 +77,7 @@
   padding: 10px 12px;
   width: 178px;
   height: 37px;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, border-color 0.3s ease;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
@@ -92,6 +94,25 @@
 
 /* Планшетна версія (768px і більше) */
 @media (min-width: 768px) {
+  .link-icon {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.21em;
+    letter-spacing: -0.02em;
+    width: 55px;
+    height: 55px;
+  }
+
+  .email {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.21em;
+    letter-spacing: -0.02em;
+
+    width: 223px;
+    height: 55px;
+  }
+
   .hero {
     background-image: url(/img/header/hero-tab.png);
   }
@@ -180,7 +201,7 @@
     color: white;
     font-size: 16px;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, border-color 0.3s ease;
   }
 
   .email {
