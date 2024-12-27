@@ -73,7 +73,7 @@ function validateField(
 
 // Валидация email
 function validateEmail(email) {
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const emailRegex = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
   return emailRegex.test(email);
 }
 
@@ -120,17 +120,21 @@ contactForm.addEventListener('submit', async e => {
 
   // Имитация отправки данных на сервер
   try {
-    console.log('Отправка данных на сервер...');
-    await new Promise((resolve, reject) => {
-      setTimeout(() => {
-        const isSuccess = true; // Успешный или неуспешный ответ
-        if (isSuccess) {
-          resolve();
-        } else {
-          reject(new Error('Server error: Unable to process your request.'));
-        }
-      }, 1500);
-    });
+    const response = await fetch(
+      'https://portfolio-js.b.goit.study/api/requests',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: emailInput.value.trim(),
+          comment: commentsInput.value.trim(),
+        }),
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error('Server error: Unable to process your request.');
+    }
 
     // Успешная отправка
     resetStyles(); // Очистка стилей после отправки
@@ -138,7 +142,8 @@ contactForm.addEventListener('submit', async e => {
     openModal(); // Открытие модального окна
   } catch (error) {
     console.error(error.message);
-    alert(`Error: ${error.message}`);
+    statusMessage.textContent = `Error: ${error.message}`;
+    statusMessage.classList.add('error');
   }
 });
 
