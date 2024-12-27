@@ -17,6 +17,12 @@
   flex-direction: column;
   gap: 32px;
 }
+
+.button_work_together:hover {
+  border-color: #fafafa;
+  color: #ed3b44;
+}
+
 .icon-frame {
   display: flex;
   background-color: #ed3b44;
@@ -78,6 +84,7 @@
   letter-spacing: -0.02em;
   color: #fafafa;
   margin-right: auto;
+  transition: border-color 0.3s ease, color 0.3s ease;
 }
 
 /* Styles for Tablet devices */
