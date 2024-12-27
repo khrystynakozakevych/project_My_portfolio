@@ -32,7 +32,7 @@
   flex-wrap: wrap;
   gap: 16px;
   justify-content: space-between;
-  padding-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .text-block {
@@ -186,7 +186,7 @@
     line-height: 1.05em;
   }
   .banner {
-    padding-bottom: 64px;
+    margin-bottom: 64px;
   }
   .accordion-block {
     margin-bottom: 64px;
@@ -231,7 +231,7 @@
   }
   .banner {
     gap: 0;
-    padding-bottom: 64px;
+    margin-bottom: 64px;
   }
   .text-block {
     width: 680px;

@@ -2,142 +2,114 @@
   padding-bottom: 64px;
 }
 
-.container-faq {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
+.main-section-faq-title {
+  color: #fafafa66;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5em;
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
 }
 
-.container-faq ul {
-  display: contents;
-  list-style: none;
-  padding: 0;
+.faq-accordion-container .ac-trigger::after {
+  display: none;
+}
+
+.faq-accordion-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.faq-accordion-container .ac {
+  width: 100%;
+  background-color: transparent;
+  padding: 20px 0;
+  border: none;
+  border-bottom: 1px solid #fafafa33;
   margin: 0;
 }
 
-.faq-item {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border: none;
-  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-  position: relative;
+.faq-accordion-container {
+  border-top: 1px solid #fafafa33;
 }
 
-.faq-item:first-child {
-  border-top: 1px solid rgba(250, 250, 250, 0.2);
-}
-
-.faq-toggle {
+.faq-accordion-container .ac-header {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 50%;
-  background: none;
-  cursor: pointer;
-  position: absolute;
-  top: 20px;
-  right: 0;
-  width: 34px;
-  height: 34px;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5em;
+  letter-spacing: -0.02em;
+  text-align: left;
+  gap: 20px;
 }
 
-.faq-icon {
-  width: 20px;
-  height: 20px;
+.faq-accordion-container .ac-trigger svg {
+  display: block;
   stroke: #fafafa;
   fill: none;
 }
 
-.faq-item h3 {
-  color: #fafafa;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  display: inline-block;
-  max-width: 265px;
+.faq-accordion-container .ac-header .ac-trigger {
+  margin: 0;
+  padding: 6px;
+  border: 1px solid #fafafa33;
+  border-radius: 50%;
+  width: auto;
 }
 
-.faq-item p {
-  margin-top: 16px;
-  color: rgba(250, 250, 250, 0.6);
-  display: none;
-}
-
-.main-section-faq-title {
-  font-weight: 600;
+.faq-accordion-container .ac .ac-panel .ac-text {
+  font: initial;
+  padding: 0;
+  padding-top: 16px;
+  color: #fafafa99;
   font-size: 16px;
-  line-height: 1.5;
+  font-weight: 500;
+  line-height: 1.5em;
   letter-spacing: -0.02em;
-  color: rgba(250, 250, 250, 0.4);
-  margin-bottom: 32px;
 }
 
-@media screen and (min-width: 768px) {
+.faq-accordion-container .ac-trigger[aria-expanded='true'] svg {
+  rotate: 180deg;
+}
+
+.faq-accordion-container:not(.no-animation) svg {
+  transition: rotate ease 600ms;
+}
+
+@media only screen and (min-width: 768px) {
   #faq {
     padding-bottom: 96px;
   }
-
-  .faq-item {
-    padding-top: 32px;
-    padding-bottom: 32px;
+  .faq-accordion-container .ac {
+    padding: 32px 0;
   }
-
-  .faq-toggle {
-    top: 32px;
-    right: 0;
-    width: 40px;
-    height: 40px;
-  }
-
-  .faq-item h3 {
-    max-width: 574px;
-  }
-
-  .faq-item:last-child h3 {
-    max-width: 485px;
-  }
-
-  .faq-item p {
-    margin-right: 70px;
+  .faq-accordion-container .ac-header .ac-trigger {
+    padding: 9px;
   }
 }
 
-@media (min-width: 1440px) {
+@media only screen and (min-width: 1440px) {
   #faq {
     padding-bottom: 164px;
   }
-
-  .container-faq {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0;
+  .faq-accordion-container {
+    display: grid;
+    grid-template-columns: [first] 50% [second] 50%;
+    grid-auto-flow: column;
   }
 
-  .faq-item {
-    padding-right: 70px;
-    position: relative;
+  .faq-accordion-container .ac:first-child {
+    border-top: none;
   }
-
-  .faq-item:nth-child(odd) {
-    border-right: 1px solid rgba(250, 250, 250, 0.2);
+  .faq-accordion-container .ac:nth-child(n + 1):nth-child(-n + 3) {
+    grid-column-start: first;
+    padding-right: 32px;
   }
-
-  .faq-item:nth-child(even) {
+  .faq-accordion-container .ac:nth-child(n + 4) {
+    grid-column-start: second;
+    border-left: 1px solid #fafafa33;
     padding-left: 32px;
-  }
-
-  .faq-item:nth-last-child(-n + 2) {
-    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-  }
-
-  .faq-item:nth-child(2) {
-    border-top: 1px solid rgba(250, 250, 250, 0.2);
-  }
-
-  .faq-item:nth-child(odd) .faq-toggle {
-    right: 32px;
   }
 }
