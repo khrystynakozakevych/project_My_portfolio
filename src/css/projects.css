@@ -66,6 +66,13 @@
   border: 1px solid rgba(28, 29, 32, 0.2);
   border-radius: 60px;
   padding: 13px 18px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-tag:hover,
+.project-tag:focus {
+  background-color: #e0373f;
+  color: #fafafa;
 }
 
 .project-title {
@@ -88,6 +95,12 @@
   font-size: 16px;
   letter-spacing: -0.02em;
   color: #fafafa;
+  transition: background-color 0.3s ease;
+}
+
+.project-link:hover,
+.project-link:focus {
+  background-color: #e0373f;
 }
 
 .arrows {
@@ -98,7 +111,7 @@
 
 .arrow-next,
 .arrow-prev {
-  border: 1px solid rgba(250, 250, 250, 0.2);
+  border: 1px solid rgba(250, 250, 250, 0.5);
   border-radius: 50%;
   padding: 18px;
   width: 68px;
@@ -148,9 +161,6 @@
   .project-image {
     padding: 120px 45px;
   }
-  /* .swiper-wrapper {
-    margin-bottom: 64px;
-  } */
   .project-tag {
     padding: 18px;
   }

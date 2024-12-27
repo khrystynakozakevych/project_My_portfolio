@@ -24,6 +24,7 @@ const swiper2 = new Swiper('.swiper2', {
   direction: 'horizontal',
   slidesPerView: countSlidesPerView(),
   spaceBetween: 16,
+  slidesPerView: 1,
   scrollbar: {
     el: '.swiper-scrollbar',
     hide: true,
@@ -35,10 +36,13 @@ const swiper2 = new Swiper('.swiper2', {
   speed: 750,
   keyboard: {
     enabled: true,
+    onlyInViewport: true,
+
   },
   grabCursor: true,
   simulateTouch: true,
 });
+
 
 function handleResize() {
   swiper2.params.slidesPerView = countSlidesPerView();
