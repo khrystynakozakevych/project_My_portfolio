@@ -10,7 +10,8 @@ const swiper = new Swiper('.swiper', {
     navigation: {
       nextEl: '.arrow-next',
       prevEl: '.arrow-prev',
-    },
+  },
+    speed: 400,
     grabCursor: true,
     simulateTouch: true, 
   });

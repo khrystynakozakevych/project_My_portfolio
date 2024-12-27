@@ -1,10 +1,7 @@
 .benefits {
-  margin-top: 64px;
-}
-
-.container-benefits {
   padding-bottom: 64px;
 }
+
 .benefits-header {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 600;
@@ -86,7 +83,7 @@
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
   .benefits {
-    margin-top: 96px;
+    padding-bottom: 96px;
   }
   .benefits-frame {
     display: flex;
@@ -97,7 +94,7 @@
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
   .benefits {
-    margin-top: 164px;
+    padding-bottom: 164px;
   }
   .container-benefits {
     display: flex;

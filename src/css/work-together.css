@@ -1,6 +1,6 @@
 .footer {
   width: 100%;
-  margin-top: 64px;
+  padding-top: 32px;
   padding: 32px 0px 32px 0px;
 }
 
@@ -175,7 +175,8 @@
 
 @media only screen and (min-width: 768px) {
   .footer {
-    margin-top: 96px;
+    padding-top: 85px;
+    padding-bottom: 169px;
   }
 
   .wrapper {
@@ -234,18 +235,13 @@
 
 @media screen and (min-width: 1440px) {
   .footer {
-    margin-top: 164px;
+    width: 100%;
+    padding-top: 85px;
+    padding-bottom: 169px;
   }
 
   .wrapper {
     width: 1112px;
-    padding-top: 80px;
-    padding-bottom: 169px;
-  }
-
-  .footer {
-    width: 100%;
-    padding: 32px 0px 32px 0px;
   }
 
   .logo {
