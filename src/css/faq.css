@@ -68,6 +68,7 @@
   font-weight: 500;
   line-height: 1.5em;
   letter-spacing: -0.02em;
+  font-family: 'Inter Tight', serif;
 }
 
 .faq-accordion-container .ac-trigger[aria-expanded='true'] svg {
