@@ -1,7 +1,8 @@
 /* Styles for Mobile devices */
 
 #abt-me-section {
-  margin-top: 64px;
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 
 .text-block p {
@@ -174,7 +175,8 @@
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
   #abt-me-section {
-    margin-bottom: 96px;
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
   .text-block {
     height: 700px;
@@ -224,7 +226,8 @@
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
   #abt-me-section {
-    margin-top: 96px;
+    padding-top: 164px;
+    padding-bottom: 164px;
   }
   .banner {
     gap: 0;

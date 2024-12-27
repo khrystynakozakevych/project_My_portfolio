@@ -1,10 +1,9 @@
 #faq {
-  margin-bottom: 64px;
+  padding-bottom: 64px;
 }
 
 .main-section-faq-title {
   color: #fafafa66;
-  font-family: Inter Tight;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.5em;
@@ -38,8 +37,6 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-
-  font-family: Inter Tight;
   font-size: 20px;
   font-weight: 600;
   line-height: 1.5em;
@@ -67,7 +64,6 @@
   padding: 0;
   padding-top: 16px;
   color: #fafafa99;
-  font-family: 'Inter Tight', serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5em;
@@ -84,7 +80,7 @@
 
 @media only screen and (min-width: 768px) {
   #faq {
-    margin-bottom: 96px;
+    padding-bottom: 96px;
   }
   .faq-accordion-container .ac {
     padding: 32px 0;
@@ -96,7 +92,7 @@
 
 @media only screen and (min-width: 1440px) {
   #faq {
-    margin-bottom: 164px;
+    padding-bottom: 164px;
   }
   .faq-accordion-container {
     display: grid;
