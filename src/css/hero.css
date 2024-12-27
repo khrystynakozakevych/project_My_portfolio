@@ -61,7 +61,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
 }
 
 .email {
@@ -84,16 +84,10 @@
   box-sizing: border-box;
 }
 
-.email:hover {
-  border: 1px solid #fafafa;
-  border-radius: 60px;
-  width: 223px;
-  height: 55px;
-}
-
 .link-icon:hover,
 .email:hover {
   color: #ff6b6b;
+  border: 1px solid #fafafa;
 }
 
 /* Планшетна версія (768px і більше) */
