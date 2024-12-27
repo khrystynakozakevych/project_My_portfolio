@@ -94,7 +94,15 @@
   color: transparent;
   position: relative;
   background-color: transparent;
+
+  transition: opacity 0.3s ease;
 }
+#left-btn2.swiper-button-disabled,
+#right-btn2.swiper-button-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 @media screen and (max-width: 374px) {
   .not-found {
     text-align: center;

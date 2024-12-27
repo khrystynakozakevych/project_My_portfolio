@@ -12,8 +12,17 @@ const swiper = new Swiper('.swiper', {
       prevEl: '.arrow-prev',
   },
     speed: 400,
-    grabCursor: true,
     simulateTouch: true, 
+});
+  
+const projectImages = document.querySelectorAll('.project-image');
+
+projectImages.forEach((image) => {
+  image.addEventListener('mouseover', () => {
+    image.style.cursor = 'grab';
   });
 
-
+  image.addEventListener('mouseout', () => {
+    image.style.cursor = 'default';
+  });
+});
