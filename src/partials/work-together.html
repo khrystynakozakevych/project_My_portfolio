@@ -40,9 +40,10 @@
             type="email"
             id="email"
             placeholder="Your Email"
-            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
             aria-label="Your email address"
             required
+            autocomplete="off"
           />
           <p class="status-message" id="statusMessage"></p>
         </label>
@@ -55,6 +56,7 @@
             aria-label="Your comments"
             required
           ></textarea>
+          <p class="commet-message" id="commetMessage"></p>
         </label>
       </div>
       <button class="form-btn" type="submit">Send</button>

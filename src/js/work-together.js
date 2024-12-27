@@ -7,6 +7,7 @@ const modalClose = document.querySelector('.modal-close');
 const emailInput = document.getElementById('email');
 const statusMessage = document.getElementById('statusMessage');
 const commentsInput = document.getElementById('comments');
+const commentMessage = document.getElementById('commetMessage');
 
 // Функция для открытия модального окна
 function openModal() {
@@ -33,10 +34,52 @@ document.addEventListener('keydown', e => {
   }
 });
 
+// Общая функция для валидации
+function validateField(
+  input,
+  messageElement,
+  validateFn,
+  emptyMessage,
+  errorMessage,
+  successMessage
+) {
+  const value = input.value.trim();
+
+  if (!value) {
+    input.classList.add('invalid');
+    input.classList.remove('valid');
+    messageElement.textContent = emptyMessage;
+    messageElement.classList.add('error');
+    messageElement.classList.remove('success');
+    return false;
+  }
+
+  if (!validateFn(value)) {
+    input.classList.add('invalid');
+    input.classList.remove('valid');
+    messageElement.textContent = errorMessage;
+    messageElement.classList.add('error');
+    messageElement.classList.remove('success');
+    return false;
+  }
+
+  input.classList.remove('invalid');
+  input.classList.add('valid');
+  messageElement.textContent = successMessage;
+  messageElement.classList.remove('error');
+  messageElement.classList.add('success');
+  return true;
+}
+
 // Валидация email
 function validateEmail(email) {
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  return emailRegex.test(email.trim());
+  const emailRegex = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+  return emailRegex.test(email);
+}
+
+// Валидация комментариев
+function validateComments(comments) {
+  return comments.length >= 5; // Минимум 5 символов
 }
 
 // Сброс стилей полей и сообщений
@@ -44,70 +87,63 @@ function resetStyles() {
   emailInput.classList.remove('valid', 'invalid');
   commentsInput.classList.remove('valid', 'invalid');
   statusMessage.textContent = '';
+  commentMessage.textContent = '';
   statusMessage.classList.remove('success', 'error');
+  commentMessage.classList.remove('success', 'error');
 }
 
 // Обработка отправки формы
 contactForm.addEventListener('submit', async e => {
   e.preventDefault(); // Отключение поведения браузера
 
-  const emailValue = emailInput.value.trim();
-  const commentsValue = commentsInput.value.trim();
+  const isEmailValid = validateField(
+    emailInput,
+    statusMessage,
+    validateEmail,
+    'Email is required.',
+    'Invalid email, try again.',
+    'Valid email!'
+  );
 
-  // Проверка на обязательное заполнение email
-  if (!emailValue) {
-    emailInput.classList.add('invalid');
-    statusMessage.textContent = 'Email is required.';
-    statusMessage.classList.add('error');
-    return;
-  }
+  const isCommentsValid = validateField(
+    commentsInput,
+    commentMessage,
+    validateComments,
+    'Comments are required.',
+    'Comments must be at least 5 characters.',
+    'Valid comments!'
+  );
 
-  // Проверка на валидность email
-  if (!validateEmail(emailValue)) {
-    emailInput.classList.add('invalid');
-    statusMessage.textContent = 'Invalid email, try again';
-    statusMessage.classList.add('error');
-    return;
-  }
-
-  // Если email валиден
-  emailInput.classList.remove('invalid');
-  emailInput.classList.add('valid');
-  statusMessage.textContent = 'Success!';
-  statusMessage.classList.remove('error');
-  statusMessage.classList.add('success');
-
-  // Проверка на обязательное заполнение комментария
-  if (!commentsValue) {
-    commentsInput.classList.add('invalid');
-    alert('Comments are required.');
-    return;
-  } else {
-    commentsInput.classList.remove('invalid');
-    commentsInput.classList.add('valid');
+  if (!isEmailValid || !isCommentsValid) {
+    return; // Если хотя бы одно поле некорректно, не отправлять форму
   }
 
   // Имитация отправки данных на сервер
   try {
-    console.log('Отправка данных на сервер...');
-    await new Promise((resolve, reject) => {
-      setTimeout(() => {
-        const isSuccess = true; // Успешный или неуспешный ответ
-        if (isSuccess) {
-          resolve();
-        } else {
-          reject(new Error('Server error: Unable to process your request.'));
-        }
-      }, 1500);
-    });
+    const response = await fetch(
+      'https://portfolio-js.b.goit.study/api/requests',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: emailInput.value.trim(),
+          comment: commentsInput.value.trim(),
+        }),
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error('Server error: Unable to process your request.');
+    }
 
     // Успешная отправка
-    resetStyles(); // Очистка стили после отправка валидност
+    resetStyles(); // Очистка стилей после отправки
     contactForm.reset(); // Очистка формы
     openModal(); // Открытие модального окна
   } catch (error) {
     console.error(error.message);
-    alert(`Error: ${error.message}`);
+    statusMessage.textContent = `Error: ${error.message}`;
+    statusMessage.classList.add('error');
   }
 });
 
