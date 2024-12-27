@@ -46,8 +46,10 @@
 }
 
 .hero-social {
-  width: 37px;
-  height: 37px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
 }
 
 .link-icon {
