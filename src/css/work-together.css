@@ -85,6 +85,7 @@
   letter-spacing: -0.02em;
   color: #fafafa;
   transition: all 0.5s;
+  flex-shrink: 0;
 }
 
 .form-btn:hover {
